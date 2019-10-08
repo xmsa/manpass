@@ -49,6 +49,13 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox31 = new System.Windows.Forms.PictureBox();
+            this.pictureBox32 = new System.Windows.Forms.PictureBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -107,10 +114,6 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -124,6 +127,9 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
@@ -383,6 +389,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.Controls.Add(this.panel7);
             this.panel6.Controls.Add(this.label23);
             this.panel6.Controls.Add(this.label22);
             this.panel6.Controls.Add(this.label21);
@@ -406,6 +413,74 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(720, 449);
             this.panel6.TabIndex = 14;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Transparent;
+            this.panel7.Controls.Add(this.pictureBox31);
+            this.panel7.Controls.Add(this.pictureBox32);
+            this.panel7.Location = new System.Drawing.Point(0, 2);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(720, 449);
+            this.panel7.TabIndex = 15;
+            // 
+            // pictureBox31
+            // 
+            this.pictureBox31.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox31.Image = global::manpass.Properties.Resources.about;
+            this.pictureBox31.Location = new System.Drawing.Point(134, 148);
+            this.pictureBox31.Name = "pictureBox31";
+            this.pictureBox31.Size = new System.Drawing.Size(182, 140);
+            this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox31.TabIndex = 1;
+            this.pictureBox31.TabStop = false;
+            // 
+            // pictureBox32
+            // 
+            this.pictureBox32.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox32.Image = global::manpass.Properties.Resources.help;
+            this.pictureBox32.Location = new System.Drawing.Point(374, 148);
+            this.pictureBox32.Name = "pictureBox32";
+            this.pictureBox32.Size = new System.Drawing.Size(182, 140);
+            this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox32.TabIndex = 1;
+            this.pictureBox32.TabStop = false;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(452, 201);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(115, 38);
+            this.label23.TabIndex = 7;
+            this.label23.Text = "label19";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(322, 201);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(115, 38);
+            this.label22.TabIndex = 7;
+            this.label22.Text = "label19";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(201, 201);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(115, 38);
+            this.label21.TabIndex = 7;
+            this.label21.Text = "label19";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(80, 201);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(115, 38);
+            this.label20.TabIndex = 7;
+            this.label20.Text = "label19";
             // 
             // label19
             // 
@@ -944,42 +1019,6 @@
             this.pictureBox8.TabIndex = 1;
             this.pictureBox8.TabStop = false;
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(80, 201);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(115, 38);
-            this.label20.TabIndex = 7;
-            this.label20.Text = "label19";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(201, 201);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(115, 38);
-            this.label21.TabIndex = 7;
-            this.label21.Text = "label19";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(322, 201);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(115, 38);
-            this.label22.TabIndex = 7;
-            this.label22.Text = "label19";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(452, 201);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(115, 38);
-            this.label23.TabIndex = 7;
-            this.label23.Text = "label19";
-            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 38F);
@@ -1015,6 +1054,9 @@
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
@@ -1127,6 +1169,9 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox pictureBox31;
+        private System.Windows.Forms.PictureBox pictureBox32;
     }
 }
 
