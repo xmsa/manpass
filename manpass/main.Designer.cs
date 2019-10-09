@@ -201,6 +201,7 @@
             this.btn_PLeft_Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_PLeft_Exit.TabIndex = 1;
             this.btn_PLeft_Exit.TabStop = false;
+            this.btn_PLeft_Exit.Click += new System.EventHandler(this.Btn_PLeft_Exit_Click);
             // 
             // btn_PLeft_Setting
             // 

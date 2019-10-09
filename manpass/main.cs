@@ -68,5 +68,11 @@ namespace manpass
             path = string.Empty;
             return true ;
         }
+
+        private void Btn_PLeft_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
     }
 }

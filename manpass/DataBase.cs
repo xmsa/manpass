@@ -70,6 +70,10 @@ namespace manpass
             }
             m_dbConnection = ConnectionDB("DataBase");
         }
+        ~ DataBase()
+        {
+            m_dbConnection.Close();
+        }
 
         private static void CreateFileDB(string name)
         {
