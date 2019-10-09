@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+
 
 namespace manpass
 {
@@ -44,7 +46,27 @@ namespace manpass
             panel_Manager.Visible =false;
             panel_Setting.Visible =false;
             panel_SignUp.Visible =false;
+            
+        }
 
+        public static bool openfile(ref string path, string Filter)
+        {
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.Filter = Filter;
+            openFileDialog.FileName = String.Empty;
+
+            DialogResult result = openFileDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                path = openFileDialog.FileName;
+                return false;
+                   
+            }
+            path = string.Empty;
+            return true ;
         }
     }
 }

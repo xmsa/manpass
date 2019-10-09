@@ -14,41 +14,48 @@ namespace manpass
         SQLiteConnection m_dbConnection;
         public DataBase()
         {
+            bool flag = true;
             if (!File.Exists(Application.StartupPath.ToString() + @"\DataBase.sqlite"))
             {
-                var message=MessageBox.Show("Build a new DataBase \"Yes\" \nImport the DataBase \"No\"", "DataBase not found",MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (message==DialogResult.Yes)
+                while (flag)
                 {
-                    CreateFileDB("DataBase");
+                    var message = MessageBox.Show("Build a new DataBase \"Yes\" \nImport the DataBase \"No\"", "DataBase not found", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (message == DialogResult.Yes)
+                    {
+                        CreateFileDB("DataBase");
 
-                    m_dbConnection = ConnectionDB("DataBase");
+                        m_dbConnection = ConnectionDB("DataBase");
 
-                    Dictionary<string, string> tb_user = new Dictionary<string, string>();
-                    Dictionary<string, string> tb_profile = new Dictionary<string, string>();
-                    Dictionary<string, string> tb_password = new Dictionary<string, string>();
+                        Dictionary<string, string> tb_user = new Dictionary<string, string>();
+                        Dictionary<string, string> tb_profile = new Dictionary<string, string>();
+                        Dictionary<string, string> tb_password = new Dictionary<string, string>();
 
-                    tb_user.Add("Uesr", "TEXT NOT NULL PRIMARY KEY");
-                    tb_user.Add("Password", "TEXT NOT NULL");
+                        tb_user.Add("Uesr", "TEXT NOT NULL PRIMARY KEY");
+                        tb_user.Add("Password", "TEXT NOT NULL");
 
-                    tb_profile.Add("Uesr", "TEXT NOT NULL PRIMARY KEY");
-                    tb_profile.Add("FirstName", "TEXT NOT NULL ");
-                    tb_profile.Add("LastName", "TEXT NOT NULL ");
-                    tb_profile.Add("Email", "TEXT NOT NULL ");
-                    tb_profile.Add("phoneNumber", "TEXT NOT NULL ");
+                        tb_profile.Add("Uesr", "TEXT NOT NULL PRIMARY KEY");
+                        tb_profile.Add("FirstName", "TEXT NOT NULL ");
+                        tb_profile.Add("LastName", "TEXT NOT NULL ");
+                        tb_profile.Add("Email", "TEXT NOT NULL ");
+                        tb_profile.Add("phoneNumber", "TEXT NOT NULL ");
 
-                    tb_password.Add("Title", "TEXT NOT NULL");
-                    tb_password.Add("User", "TEXT");
-                    tb_password.Add("Password", "TEXT NOT NULL");
-                    tb_password.Add("Site", "TEXT");
-                    tb_password.Add("Description", "TEXT");
+                        tb_password.Add("Title", "TEXT NOT NULL");
+                        tb_password.Add("User", "TEXT");
+                        tb_password.Add("Password", "TEXT NOT NULL");
+                        tb_password.Add("Site", "TEXT");
+                        tb_password.Add("Description", "TEXT");
 
-                    create_tb(m_dbConnection, "tb_user", tb_user);
-                    create_tb(m_dbConnection, "tb_profile", tb_profile);
-                    create_tb(m_dbConnection, "tb_password", tb_password);
-                }
-                else if (message == DialogResult.No)
-                {
-
+                        create_tb(m_dbConnection, "tb_user", tb_user);
+                        create_tb(m_dbConnection, "tb_profile", tb_profile);
+                        create_tb(m_dbConnection, "tb_password", tb_password);
+                        break;
+                    }
+                    else if (message == DialogResult.No)
+                    {
+                        string path = string.Empty;
+                        flag = frm_Main.openfile(ref path, "DataBase|DataBase.sqlite");
+                        MessageBox.Show(path);
+                    }
                 }
             }
         }
