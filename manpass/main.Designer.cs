@@ -226,6 +226,7 @@
             this.btn_PLeft_Help.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_PLeft_Help.TabIndex = 1;
             this.btn_PLeft_Help.TabStop = false;
+            this.btn_PLeft_Help.Click += new System.EventHandler(this.Btn_PLeft_Help_Click);
             // 
             // btn_PLeft_Manager
             // 
