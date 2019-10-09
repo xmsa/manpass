@@ -133,5 +133,54 @@ namespace manpass
             str = " ( " + key + " ) values ( " + value + " ) ";
             return str;
         }
+        public List<List<string>> get_value(string tbl, List<string> Lst, Dictionary<string, string> dict)
+        {
+            m_dbConnection.Open();
+            List<List<string>> value;
+            string where = string.Empty;
+            if (dict.Count() != 0)
+            {
+                where = " Where " + dictostr(dict, "=");
+            }
+            string lst = "*";
+            if (Lst.Count() != 0)
+            {
+                lst = lsttostr(Lst, " , ");
+            }
+
+            string sql = "select " + lst + " from " + tbl + where;
+            SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            value = readtolit(reader);
+            m_dbConnection.Close();
+            return value;
+
+        }
+        private static string lsttostr(List<string> lst, string str)
+        {
+            string tostr = string.Empty;
+            foreach (string item in lst)
+            {
+                tostr += (item + str);
+            }
+            return tostr.Remove(tostr.Length - 2);
+        }
+        private static List<List<string>> readtolit(SQLiteDataReader reader)
+        {
+            List<List<string>> value = new List<List<string>>();
+            var a = reader.VisibleFieldCount;
+            while (reader.Read())
+            {
+                List<string> lst = new List<string>();
+                for (int i = 0; i < a; i++)
+                {
+                    string myreader = reader.GetString(i);
+                    lst.Add(myreader);
+                }
+                value.Add(lst);
+            }
+            return value;
+        }
+
     }
 }
