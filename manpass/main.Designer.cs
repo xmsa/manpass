@@ -238,6 +238,7 @@
             this.btn_PLeft_Manager.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_PLeft_Manager.TabIndex = 1;
             this.btn_PLeft_Manager.TabStop = false;
+            this.btn_PLeft_Manager.Click += new System.EventHandler(this.Btn_PLeft_Manager_Click);
             // 
             // panel_Login
             // 
