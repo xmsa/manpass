@@ -87,5 +87,16 @@ namespace manpass
 
 
         }
+
+        private void Btn_PLeft_Setting_Click(object sender, EventArgs e)
+        {
+            panel_Add_Edit_View.Visible = false;
+            panel_Help.Visible = false;
+            panel_Login.Visible = false;
+            panel_Manager.Visible = false;
+            panel_Setting.Visible = true;
+            panel_SignUp.Visible = false;
+
+        }
     }
 }
