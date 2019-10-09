@@ -190,6 +190,7 @@
             this.btn_PLeft_Login.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_PLeft_Login.TabIndex = 1;
             this.btn_PLeft_Login.TabStop = false;
+            this.btn_PLeft_Login.Click += new System.EventHandler(this.Btn_PLeft_Login_Click);
             // 
             // btn_PLeft_Exit
             // 

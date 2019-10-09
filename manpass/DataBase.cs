@@ -86,6 +86,7 @@ namespace manpass
             m_dbConnection = new SQLiteConnection("Data Source=" + name + ".sqlite;Version=3;");
             return m_dbConnection;
         }
+
         private static void create_tb(SQLiteConnection m_dbConnection, string tbl, Dictionary<string, string> dict)
         {
             m_dbConnection.Open();
@@ -95,6 +96,7 @@ namespace manpass
             command.ExecuteNonQuery(); //if is unfind
             m_dbConnection.Close();
         }
+
         private static string dictostr(Dictionary<string, string> dict, string str)
         {
             string tostr = string.Empty;
@@ -110,6 +112,7 @@ namespace manpass
                 tostr = tostr.Remove(tostr.Length - 2);
             return tostr;
         }
+
         public void insert(string tbl, Dictionary<string, string> dict)
         {
             string Primary_Key = "User";
@@ -161,7 +164,7 @@ namespace manpass
             return str;
         }
 
-        private DataTable search(string tbl, Dictionary<string, string> dict, List<string> lst)
+        public DataTable search(string tbl, Dictionary<string, string> dict, List<string> lst)
         {
             m_dbConnection.Open();
             string strwhere = string.Empty;
