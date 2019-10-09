@@ -54,7 +54,12 @@ namespace manpass
                     {
                         string path = string.Empty;
                         flag = frm_Main.openfile(ref path, "DataBase|DataBase.sqlite");
-                        MessageBox.Show(path);
+                        if (flag)
+                        {
+                            continue;
+                        }
+                        System.IO.File.Move(path, Application.StartupPath.ToString() + @"\DataBase.sqlite");
+
                     }
                 }
             }
