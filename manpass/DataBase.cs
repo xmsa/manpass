@@ -41,6 +41,7 @@ namespace manpass
                         tb_profile.Add("Email", "TEXT NOT NULL ");
                         tb_profile.Add("phoneNumber", "TEXT NOT NULL ");
 
+                        tb_password.Add("Id", "TEXT NOT NULL PRIMARY KEY");
                         tb_password.Add("Title", "TEXT NOT NULL");
                         tb_password.Add("User", "TEXT");
                         tb_password.Add("Password", "TEXT NOT NULL");
@@ -68,10 +69,6 @@ namespace manpass
 
             }
             m_dbConnection = ConnectionDB("DataBase");
-            Dictionary<string, string> dict = new Dictionary<string, string>();
-            dict.Add("User", "admin");
-            dict.Add("Password", "123");
-            insert("tb_user", dict);
         }
 
         private static void CreateFileDB(string name)
@@ -111,13 +108,33 @@ namespace manpass
         }
         public void insert(string tbl, Dictionary<string, string> dict)
         {
+            string Primary_Key = "User";
 
+            if (tbl== "tb_password")
+            {
+                Primary_Key = "Id";
+            }
+            List<string> lst = new List<string>();
+            Dictionary<string,string> dict2 = new Dictionary<string, string>();
+            dict2.Add(Primary_Key, dict[Primary_Key]);
+
+            int rows=search(tbl,  dict2 , lst).Rows.Count;
+            if (rows==0)
+            {
             m_dbConnection.Open();
             string str = dictostr_in(dict);
             string sql = "insert into " + tbl + str;
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
             command.ExecuteNonQuery();
             m_dbConnection.Close();
+            }
+            else
+            {
+                MessageBox.Show("Test");
+                return;
+            }
+
+            
 
 
         }
@@ -140,7 +157,7 @@ namespace manpass
             return str;
         }
 
-        private DataTable search( string tbl, Dictionary<string, string> dict, List<string> lst)
+        private DataTable search(string tbl, Dictionary<string, string> dict, List<string> lst)
         {
             m_dbConnection.Open();
             string strwhere = string.Empty;
