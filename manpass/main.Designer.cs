@@ -46,46 +46,12 @@
             this.btn_PLog_ForGetPassWord = new System.Windows.Forms.Button();
             this.btn_PLog_Login = new System.Windows.Forms.Button();
             this.panel_Manager = new System.Windows.Forms.Panel();
+            this.listBox_PManage_Title = new System.Windows.Forms.ListBox();
+            this.btn_PManager_View = new System.Windows.Forms.PictureBox();
+            this.btn_PManager_Edit = new System.Windows.Forms.PictureBox();
+            this.btn_PManager_Delete = new System.Windows.Forms.PictureBox();
+            this.btn_PManager_Add = new System.Windows.Forms.PictureBox();
             this.panel_Add_Edit_View = new System.Windows.Forms.Panel();
-            this.panel_SignUp = new System.Windows.Forms.Panel();
-            this.panel_Setting = new System.Windows.Forms.Panel();
-            this.panel_Help = new System.Windows.Forms.Panel();
-            this.btn_PHelp_About = new System.Windows.Forms.PictureBox();
-            this.btn_PHelp_Help = new System.Windows.Forms.PictureBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.rBtn_PSetting_Background4 = new System.Windows.Forms.RadioButton();
-            this.rBtn_PSetting_Background5 = new System.Windows.Forms.RadioButton();
-            this.rBtn_PSetting_Background3 = new System.Windows.Forms.RadioButton();
-            this.pic_PSetting_Background5 = new System.Windows.Forms.PictureBox();
-            this.pic_PSetting_Background4 = new System.Windows.Forms.PictureBox();
-            this.pic_PSetting_Background3 = new System.Windows.Forms.PictureBox();
-            this.pic_PSetting_Background2 = new System.Windows.Forms.PictureBox();
-            this.pic_PSetting_Background = new System.Windows.Forms.PictureBox();
-            this.rBtn_PSetting_Background = new System.Windows.Forms.RadioButton();
-            this.rBtn_PSetting_Background2 = new System.Windows.Forms.RadioButton();
-            this.btn_PSetting_Import = new System.Windows.Forms.PictureBox();
-            this.btn_PSetting_ExportDB = new System.Windows.Forms.PictureBox();
-            this.btn_PSetting_Edit_ProFile = new System.Windows.Forms.PictureBox();
-            this.btn_PSetting_EditPassWord = new System.Windows.Forms.PictureBox();
-            this.btn_PSign_Back = new System.Windows.Forms.PictureBox();
-            this.btn_PSign_Add = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txt_PSign_PassWord = new System.Windows.Forms.TextBox();
-            this.txt_PSign_CPassWord = new System.Windows.Forms.TextBox();
-            this.txt_PSign_Email = new System.Windows.Forms.TextBox();
-            this.txt_PSign_FirstName = new System.Windows.Forms.TextBox();
-            this.txt_PSign_Username = new System.Windows.Forms.TextBox();
-            this.txt_PSign_Phone_Number = new System.Windows.Forms.TextBox();
-            this.txt_PSign_LastName = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btn_PAEV_Random = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -108,12 +74,46 @@
             this.txt_PAEV_Description = new System.Windows.Forms.TextBox();
             this.btn_PAEV_Edit = new System.Windows.Forms.PictureBox();
             this.btn_PAEV_Add = new System.Windows.Forms.PictureBox();
-            this.listBox_PManage_Title = new System.Windows.Forms.ListBox();
-            this.btn_PManager_View = new System.Windows.Forms.PictureBox();
-            this.btn_PManager_Edit = new System.Windows.Forms.PictureBox();
-            this.btn_PManager_Delete = new System.Windows.Forms.PictureBox();
-            this.btn_PManager_Add = new System.Windows.Forms.PictureBox();
+            this.panel_SignUp = new System.Windows.Forms.Panel();
+            this.btn_PSign_Back = new System.Windows.Forms.PictureBox();
+            this.btn_PSign_Add = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txt_PSign_PassWord = new System.Windows.Forms.TextBox();
+            this.txt_PSign_CPassWord = new System.Windows.Forms.TextBox();
+            this.txt_PSign_Email = new System.Windows.Forms.TextBox();
+            this.txt_PSign_FirstName = new System.Windows.Forms.TextBox();
+            this.txt_PSign_Username = new System.Windows.Forms.TextBox();
+            this.txt_PSign_Phone_Number = new System.Windows.Forms.TextBox();
+            this.txt_PSign_LastName = new System.Windows.Forms.TextBox();
+            this.panel_Setting = new System.Windows.Forms.Panel();
             this.groupBox_PSetting_Background = new System.Windows.Forms.GroupBox();
+            this.pic_PSetting_Background5 = new System.Windows.Forms.PictureBox();
+            this.rBtn_PSetting_Background2 = new System.Windows.Forms.RadioButton();
+            this.rBtn_PSetting_Background = new System.Windows.Forms.RadioButton();
+            this.pic_PSetting_Background = new System.Windows.Forms.PictureBox();
+            this.pic_PSetting_Background2 = new System.Windows.Forms.PictureBox();
+            this.rBtn_PSetting_Background4 = new System.Windows.Forms.RadioButton();
+            this.pic_PSetting_Background3 = new System.Windows.Forms.PictureBox();
+            this.rBtn_PSetting_Background5 = new System.Windows.Forms.RadioButton();
+            this.pic_PSetting_Background4 = new System.Windows.Forms.PictureBox();
+            this.rBtn_PSetting_Background3 = new System.Windows.Forms.RadioButton();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.btn_PSetting_Import = new System.Windows.Forms.PictureBox();
+            this.btn_PSetting_ExportDB = new System.Windows.Forms.PictureBox();
+            this.btn_PSetting_Edit_ProFile = new System.Windows.Forms.PictureBox();
+            this.btn_PSetting_EditPassWord = new System.Windows.Forms.PictureBox();
+            this.panel_Help = new System.Windows.Forms.Panel();
+            this.btn_PHelp_About = new System.Windows.Forms.PictureBox();
+            this.btn_PHelp_Help = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Icon)).BeginInit();
             this.panel_Left.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PLeft_Login)).BeginInit();
@@ -124,23 +124,11 @@
             this.panel_Login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PLog_Show)).BeginInit();
             this.panel_Manager.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PManager_View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PManager_Edit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PManager_Delete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PManager_Add)).BeginInit();
             this.panel_Add_Edit_View.SuspendLayout();
-            this.panel_SignUp.SuspendLayout();
-            this.panel_Setting.SuspendLayout();
-            this.panel_Help.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PHelp_About)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PHelp_Help)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_PSetting_Background5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_PSetting_Background4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_PSetting_Background3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_PSetting_Background2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_PSetting_Background)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PSetting_Import)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PSetting_ExportDB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PSetting_Edit_ProFile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PSetting_EditPassWord)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PSign_Back)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PSign_Add)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PAEV_Random)).BeginInit();
             this.groupBox_PAEV_Random.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_PAEV_Up)).BeginInit();
@@ -149,11 +137,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_PAEV_Down)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PAEV_Edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PAEV_Add)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PManager_View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PManager_Edit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PManager_Delete)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PManager_Add)).BeginInit();
+            this.panel_SignUp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PSign_Back)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PSign_Add)).BeginInit();
+            this.panel_Setting.SuspendLayout();
             this.groupBox_PSetting_Background.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_PSetting_Background5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_PSetting_Background)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_PSetting_Background2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_PSetting_Background3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_PSetting_Background4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PSetting_Import)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PSetting_ExportDB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PSetting_Edit_ProFile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PSetting_EditPassWord)).BeginInit();
+            this.panel_Help.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PHelp_About)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PHelp_Help)).BeginInit();
             this.SuspendLayout();
             // 
             // pic_Icon
@@ -338,6 +338,60 @@
             this.panel_Manager.Size = new System.Drawing.Size(240, 160);
             this.panel_Manager.TabIndex = 3;
             // 
+            // listBox_PManage_Title
+            // 
+            this.listBox_PManage_Title.Dock = System.Windows.Forms.DockStyle.Top;
+            this.listBox_PManage_Title.FormattingEnabled = true;
+            this.listBox_PManage_Title.ItemHeight = 38;
+            this.listBox_PManage_Title.Location = new System.Drawing.Point(0, 0);
+            this.listBox_PManage_Title.Name = "listBox_PManage_Title";
+            this.listBox_PManage_Title.Size = new System.Drawing.Size(240, 346);
+            this.listBox_PManage_Title.TabIndex = 0;
+            // 
+            // btn_PManager_View
+            // 
+            this.btn_PManager_View.BackColor = System.Drawing.Color.Transparent;
+            this.btn_PManager_View.Image = global::manpass.Properties.Resources.eye;
+            this.btn_PManager_View.Location = new System.Drawing.Point(28, 381);
+            this.btn_PManager_View.Name = "btn_PManager_View";
+            this.btn_PManager_View.Size = new System.Drawing.Size(62, 50);
+            this.btn_PManager_View.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_PManager_View.TabIndex = 1;
+            this.btn_PManager_View.TabStop = false;
+            // 
+            // btn_PManager_Edit
+            // 
+            this.btn_PManager_Edit.BackColor = System.Drawing.Color.Transparent;
+            this.btn_PManager_Edit.Image = global::manpass.Properties.Resources.edit;
+            this.btn_PManager_Edit.Location = new System.Drawing.Point(308, 381);
+            this.btn_PManager_Edit.Name = "btn_PManager_Edit";
+            this.btn_PManager_Edit.Size = new System.Drawing.Size(62, 50);
+            this.btn_PManager_Edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_PManager_Edit.TabIndex = 1;
+            this.btn_PManager_Edit.TabStop = false;
+            // 
+            // btn_PManager_Delete
+            // 
+            this.btn_PManager_Delete.BackColor = System.Drawing.Color.Transparent;
+            this.btn_PManager_Delete.Image = global::manpass.Properties.Resources.remove;
+            this.btn_PManager_Delete.Location = new System.Drawing.Point(216, 381);
+            this.btn_PManager_Delete.Name = "btn_PManager_Delete";
+            this.btn_PManager_Delete.Size = new System.Drawing.Size(62, 50);
+            this.btn_PManager_Delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_PManager_Delete.TabIndex = 1;
+            this.btn_PManager_Delete.TabStop = false;
+            // 
+            // btn_PManager_Add
+            // 
+            this.btn_PManager_Add.BackColor = System.Drawing.Color.Transparent;
+            this.btn_PManager_Add.Image = global::manpass.Properties.Resources.add;
+            this.btn_PManager_Add.Location = new System.Drawing.Point(124, 381);
+            this.btn_PManager_Add.Name = "btn_PManager_Add";
+            this.btn_PManager_Add.Size = new System.Drawing.Size(62, 50);
+            this.btn_PManager_Add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_PManager_Add.TabIndex = 1;
+            this.btn_PManager_Add.TabStop = false;
+            // 
             // panel_Add_Edit_View
             // 
             this.panel_Add_Edit_View.BackColor = System.Drawing.Color.Transparent;
@@ -359,396 +413,6 @@
             this.panel_Add_Edit_View.Name = "panel_Add_Edit_View";
             this.panel_Add_Edit_View.Size = new System.Drawing.Size(240, 160);
             this.panel_Add_Edit_View.TabIndex = 4;
-            // 
-            // panel_SignUp
-            // 
-            this.panel_SignUp.BackColor = System.Drawing.Color.Transparent;
-            this.panel_SignUp.Controls.Add(this.btn_PSign_Back);
-            this.panel_SignUp.Controls.Add(this.btn_PSign_Add);
-            this.panel_SignUp.Controls.Add(this.label12);
-            this.panel_SignUp.Controls.Add(this.label13);
-            this.panel_SignUp.Controls.Add(this.label14);
-            this.panel_SignUp.Controls.Add(this.label18);
-            this.panel_SignUp.Controls.Add(this.label15);
-            this.panel_SignUp.Controls.Add(this.label17);
-            this.panel_SignUp.Controls.Add(this.label16);
-            this.panel_SignUp.Controls.Add(this.txt_PSign_PassWord);
-            this.panel_SignUp.Controls.Add(this.txt_PSign_CPassWord);
-            this.panel_SignUp.Controls.Add(this.txt_PSign_Email);
-            this.panel_SignUp.Controls.Add(this.txt_PSign_FirstName);
-            this.panel_SignUp.Controls.Add(this.txt_PSign_Username);
-            this.panel_SignUp.Controls.Add(this.txt_PSign_Phone_Number);
-            this.panel_SignUp.Controls.Add(this.txt_PSign_LastName);
-            this.panel_SignUp.Location = new System.Drawing.Point(562, 232);
-            this.panel_SignUp.Name = "panel_SignUp";
-            this.panel_SignUp.Size = new System.Drawing.Size(240, 160);
-            this.panel_SignUp.TabIndex = 13;
-            // 
-            // panel_Setting
-            // 
-            this.panel_Setting.BackColor = System.Drawing.Color.Transparent;
-            this.panel_Setting.Controls.Add(this.groupBox_PSetting_Background);
-            this.panel_Setting.Controls.Add(this.label23);
-            this.panel_Setting.Controls.Add(this.label22);
-            this.panel_Setting.Controls.Add(this.label21);
-            this.panel_Setting.Controls.Add(this.label20);
-            this.panel_Setting.Controls.Add(this.btn_PSetting_Import);
-            this.panel_Setting.Controls.Add(this.btn_PSetting_ExportDB);
-            this.panel_Setting.Controls.Add(this.btn_PSetting_Edit_ProFile);
-            this.panel_Setting.Controls.Add(this.btn_PSetting_EditPassWord);
-            this.panel_Setting.Location = new System.Drawing.Point(72, 229);
-            this.panel_Setting.Name = "panel_Setting";
-            this.panel_Setting.Size = new System.Drawing.Size(240, 160);
-            this.panel_Setting.TabIndex = 14;
-            // 
-            // panel_Help
-            // 
-            this.panel_Help.BackColor = System.Drawing.Color.Transparent;
-            this.panel_Help.Controls.Add(this.btn_PHelp_About);
-            this.panel_Help.Controls.Add(this.btn_PHelp_Help);
-            this.panel_Help.Location = new System.Drawing.Point(562, 64);
-            this.panel_Help.Name = "panel_Help";
-            this.panel_Help.Size = new System.Drawing.Size(240, 160);
-            this.panel_Help.TabIndex = 15;
-            // 
-            // btn_PHelp_About
-            // 
-            this.btn_PHelp_About.BackColor = System.Drawing.Color.Transparent;
-            this.btn_PHelp_About.Image = global::manpass.Properties.Resources.about;
-            this.btn_PHelp_About.Location = new System.Drawing.Point(134, 148);
-            this.btn_PHelp_About.Name = "btn_PHelp_About";
-            this.btn_PHelp_About.Size = new System.Drawing.Size(182, 140);
-            this.btn_PHelp_About.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_PHelp_About.TabIndex = 1;
-            this.btn_PHelp_About.TabStop = false;
-            // 
-            // btn_PHelp_Help
-            // 
-            this.btn_PHelp_Help.BackColor = System.Drawing.Color.Transparent;
-            this.btn_PHelp_Help.Image = global::manpass.Properties.Resources.help;
-            this.btn_PHelp_Help.Location = new System.Drawing.Point(374, 148);
-            this.btn_PHelp_Help.Name = "btn_PHelp_Help";
-            this.btn_PHelp_Help.Size = new System.Drawing.Size(182, 140);
-            this.btn_PHelp_Help.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_PHelp_Help.TabIndex = 1;
-            this.btn_PHelp_Help.TabStop = false;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(481, 201);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(204, 38);
-            this.label23.TabIndex = 7;
-            this.label23.Text = "Edit PassWord";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(288, 201);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(175, 38);
-            this.label22.TabIndex = 7;
-            this.label22.Text = "Edit ProFile";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(167, 201);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(103, 38);
-            this.label21.TabIndex = 7;
-            this.label21.Text = "Export";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(46, 201);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(101, 38);
-            this.label20.TabIndex = 7;
-            this.label20.Text = "Import";
-            // 
-            // rBtn_PSetting_Background4
-            // 
-            this.rBtn_PSetting_Background4.AutoSize = true;
-            this.rBtn_PSetting_Background4.Location = new System.Drawing.Point(293, 78);
-            this.rBtn_PSetting_Background4.Name = "rBtn_PSetting_Background4";
-            this.rBtn_PSetting_Background4.Size = new System.Drawing.Size(14, 13);
-            this.rBtn_PSetting_Background4.TabIndex = 6;
-            this.rBtn_PSetting_Background4.UseVisualStyleBackColor = true;
-            // 
-            // rBtn_PSetting_Background5
-            // 
-            this.rBtn_PSetting_Background5.AutoSize = true;
-            this.rBtn_PSetting_Background5.Location = new System.Drawing.Point(389, 77);
-            this.rBtn_PSetting_Background5.Name = "rBtn_PSetting_Background5";
-            this.rBtn_PSetting_Background5.Size = new System.Drawing.Size(14, 13);
-            this.rBtn_PSetting_Background5.TabIndex = 5;
-            this.rBtn_PSetting_Background5.UseVisualStyleBackColor = true;
-            // 
-            // rBtn_PSetting_Background3
-            // 
-            this.rBtn_PSetting_Background3.AutoSize = true;
-            this.rBtn_PSetting_Background3.Location = new System.Drawing.Point(196, 77);
-            this.rBtn_PSetting_Background3.Name = "rBtn_PSetting_Background3";
-            this.rBtn_PSetting_Background3.Size = new System.Drawing.Size(14, 13);
-            this.rBtn_PSetting_Background3.TabIndex = 4;
-            this.rBtn_PSetting_Background3.UseVisualStyleBackColor = true;
-            // 
-            // pic_PSetting_Background5
-            // 
-            this.pic_PSetting_Background5.BackColor = System.Drawing.Color.Transparent;
-            this.pic_PSetting_Background5.Image = global::manpass.Properties.Resources.background5;
-            this.pic_PSetting_Background5.Location = new System.Drawing.Point(415, 59);
-            this.pic_PSetting_Background5.Name = "pic_PSetting_Background5";
-            this.pic_PSetting_Background5.Size = new System.Drawing.Size(62, 50);
-            this.pic_PSetting_Background5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_PSetting_Background5.TabIndex = 1;
-            this.pic_PSetting_Background5.TabStop = false;
-            // 
-            // pic_PSetting_Background4
-            // 
-            this.pic_PSetting_Background4.BackColor = System.Drawing.Color.Transparent;
-            this.pic_PSetting_Background4.Image = global::manpass.Properties.Resources.background4;
-            this.pic_PSetting_Background4.Location = new System.Drawing.Point(313, 59);
-            this.pic_PSetting_Background4.Name = "pic_PSetting_Background4";
-            this.pic_PSetting_Background4.Size = new System.Drawing.Size(62, 50);
-            this.pic_PSetting_Background4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_PSetting_Background4.TabIndex = 1;
-            this.pic_PSetting_Background4.TabStop = false;
-            // 
-            // pic_PSetting_Background3
-            // 
-            this.pic_PSetting_Background3.BackColor = System.Drawing.Color.Transparent;
-            this.pic_PSetting_Background3.Image = global::manpass.Properties.Resources.background3;
-            this.pic_PSetting_Background3.Location = new System.Drawing.Point(216, 59);
-            this.pic_PSetting_Background3.Name = "pic_PSetting_Background3";
-            this.pic_PSetting_Background3.Size = new System.Drawing.Size(62, 50);
-            this.pic_PSetting_Background3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_PSetting_Background3.TabIndex = 1;
-            this.pic_PSetting_Background3.TabStop = false;
-            // 
-            // pic_PSetting_Background2
-            // 
-            this.pic_PSetting_Background2.BackColor = System.Drawing.Color.Transparent;
-            this.pic_PSetting_Background2.Image = global::manpass.Properties.Resources.background2;
-            this.pic_PSetting_Background2.Location = new System.Drawing.Point(128, 59);
-            this.pic_PSetting_Background2.Name = "pic_PSetting_Background2";
-            this.pic_PSetting_Background2.Size = new System.Drawing.Size(62, 50);
-            this.pic_PSetting_Background2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_PSetting_Background2.TabIndex = 1;
-            this.pic_PSetting_Background2.TabStop = false;
-            // 
-            // pic_PSetting_Background
-            // 
-            this.pic_PSetting_Background.BackColor = System.Drawing.Color.Transparent;
-            this.pic_PSetting_Background.Image = global::manpass.Properties.Resources.background;
-            this.pic_PSetting_Background.Location = new System.Drawing.Point(27, 59);
-            this.pic_PSetting_Background.Name = "pic_PSetting_Background";
-            this.pic_PSetting_Background.Size = new System.Drawing.Size(62, 50);
-            this.pic_PSetting_Background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_PSetting_Background.TabIndex = 1;
-            this.pic_PSetting_Background.TabStop = false;
-            // 
-            // rBtn_PSetting_Background
-            // 
-            this.rBtn_PSetting_Background.AutoSize = true;
-            this.rBtn_PSetting_Background.Checked = true;
-            this.rBtn_PSetting_Background.Location = new System.Drawing.Point(2, 77);
-            this.rBtn_PSetting_Background.Name = "rBtn_PSetting_Background";
-            this.rBtn_PSetting_Background.Size = new System.Drawing.Size(14, 13);
-            this.rBtn_PSetting_Background.TabIndex = 3;
-            this.rBtn_PSetting_Background.TabStop = true;
-            this.rBtn_PSetting_Background.UseVisualStyleBackColor = true;
-            // 
-            // rBtn_PSetting_Background2
-            // 
-            this.rBtn_PSetting_Background2.AutoSize = true;
-            this.rBtn_PSetting_Background2.Location = new System.Drawing.Point(101, 77);
-            this.rBtn_PSetting_Background2.Name = "rBtn_PSetting_Background2";
-            this.rBtn_PSetting_Background2.Size = new System.Drawing.Size(14, 13);
-            this.rBtn_PSetting_Background2.TabIndex = 3;
-            this.rBtn_PSetting_Background2.UseVisualStyleBackColor = true;
-            // 
-            // btn_PSetting_Import
-            // 
-            this.btn_PSetting_Import.BackColor = System.Drawing.Color.Transparent;
-            this.btn_PSetting_Import.Image = global::manpass.Properties.Resources.inport;
-            this.btn_PSetting_Import.Location = new System.Drawing.Point(62, 242);
-            this.btn_PSetting_Import.Name = "btn_PSetting_Import";
-            this.btn_PSetting_Import.Size = new System.Drawing.Size(64, 50);
-            this.btn_PSetting_Import.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_PSetting_Import.TabIndex = 1;
-            this.btn_PSetting_Import.TabStop = false;
-            // 
-            // btn_PSetting_ExportDB
-            // 
-            this.btn_PSetting_ExportDB.BackColor = System.Drawing.Color.Transparent;
-            this.btn_PSetting_ExportDB.Image = global::manpass.Properties.Resources.export;
-            this.btn_PSetting_ExportDB.Location = new System.Drawing.Point(182, 242);
-            this.btn_PSetting_ExportDB.Name = "btn_PSetting_ExportDB";
-            this.btn_PSetting_ExportDB.Size = new System.Drawing.Size(64, 50);
-            this.btn_PSetting_ExportDB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_PSetting_ExportDB.TabIndex = 1;
-            this.btn_PSetting_ExportDB.TabStop = false;
-            // 
-            // btn_PSetting_Edit_ProFile
-            // 
-            this.btn_PSetting_Edit_ProFile.BackColor = System.Drawing.Color.Transparent;
-            this.btn_PSetting_Edit_ProFile.Image = global::manpass.Properties.Resources.profile;
-            this.btn_PSetting_Edit_ProFile.Location = new System.Drawing.Point(344, 242);
-            this.btn_PSetting_Edit_ProFile.Name = "btn_PSetting_Edit_ProFile";
-            this.btn_PSetting_Edit_ProFile.Size = new System.Drawing.Size(62, 50);
-            this.btn_PSetting_Edit_ProFile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_PSetting_Edit_ProFile.TabIndex = 1;
-            this.btn_PSetting_Edit_ProFile.TabStop = false;
-            // 
-            // btn_PSetting_EditPassWord
-            // 
-            this.btn_PSetting_EditPassWord.BackColor = System.Drawing.Color.Transparent;
-            this.btn_PSetting_EditPassWord.Image = global::manpass.Properties.Resources.login;
-            this.btn_PSetting_EditPassWord.Location = new System.Drawing.Point(552, 242);
-            this.btn_PSetting_EditPassWord.Name = "btn_PSetting_EditPassWord";
-            this.btn_PSetting_EditPassWord.Size = new System.Drawing.Size(62, 50);
-            this.btn_PSetting_EditPassWord.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_PSetting_EditPassWord.TabIndex = 1;
-            this.btn_PSetting_EditPassWord.TabStop = false;
-            // 
-            // btn_PSign_Back
-            // 
-            this.btn_PSign_Back.BackColor = System.Drawing.Color.Transparent;
-            this.btn_PSign_Back.Image = global::manpass.Properties.Resources.remove;
-            this.btn_PSign_Back.Location = new System.Drawing.Point(164, 391);
-            this.btn_PSign_Back.Name = "btn_PSign_Back";
-            this.btn_PSign_Back.Size = new System.Drawing.Size(62, 50);
-            this.btn_PSign_Back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_PSign_Back.TabIndex = 1;
-            this.btn_PSign_Back.TabStop = false;
-            // 
-            // btn_PSign_Add
-            // 
-            this.btn_PSign_Add.BackColor = System.Drawing.Color.Transparent;
-            this.btn_PSign_Add.Image = global::manpass.Properties.Resources.add;
-            this.btn_PSign_Add.Location = new System.Drawing.Point(96, 391);
-            this.btn_PSign_Add.Name = "btn_PSign_Add";
-            this.btn_PSign_Add.Size = new System.Drawing.Size(62, 50);
-            this.btn_PSign_Add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_PSign_Add.TabIndex = 1;
-            this.btn_PSign_Add.TabStop = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(31, 113);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(127, 38);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Confrim";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(31, 61);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(137, 38);
-            this.label13.TabIndex = 11;
-            this.label13.Text = "PassWord";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(31, 9);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(145, 38);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "UserName";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(30, 272);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(110, 38);
-            this.label18.TabIndex = 9;
-            this.label18.Text = "E-Mail";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(30, 165);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(158, 38);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "First Name";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(30, 324);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(213, 38);
-            this.label17.TabIndex = 8;
-            this.label17.Text = "Phone Number";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(30, 217);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(153, 38);
-            this.label16.TabIndex = 8;
-            this.label16.Text = "Last Name";
-            // 
-            // txt_PSign_PassWord
-            // 
-            this.txt_PSign_PassWord.Location = new System.Drawing.Point(261, 58);
-            this.txt_PSign_PassWord.Name = "txt_PSign_PassWord";
-            this.txt_PSign_PassWord.PasswordChar = '*';
-            this.txt_PSign_PassWord.Size = new System.Drawing.Size(425, 46);
-            this.txt_PSign_PassWord.TabIndex = 6;
-            // 
-            // txt_PSign_CPassWord
-            // 
-            this.txt_PSign_CPassWord.Location = new System.Drawing.Point(261, 110);
-            this.txt_PSign_CPassWord.Name = "txt_PSign_CPassWord";
-            this.txt_PSign_CPassWord.Size = new System.Drawing.Size(425, 46);
-            this.txt_PSign_CPassWord.TabIndex = 5;
-            // 
-            // txt_PSign_Email
-            // 
-            this.txt_PSign_Email.Location = new System.Drawing.Point(261, 269);
-            this.txt_PSign_Email.Name = "txt_PSign_Email";
-            this.txt_PSign_Email.Size = new System.Drawing.Size(425, 46);
-            this.txt_PSign_Email.TabIndex = 4;
-            // 
-            // txt_PSign_FirstName
-            // 
-            this.txt_PSign_FirstName.Location = new System.Drawing.Point(261, 162);
-            this.txt_PSign_FirstName.Name = "txt_PSign_FirstName";
-            this.txt_PSign_FirstName.Size = new System.Drawing.Size(425, 46);
-            this.txt_PSign_FirstName.TabIndex = 4;
-            // 
-            // txt_PSign_Username
-            // 
-            this.txt_PSign_Username.Location = new System.Drawing.Point(261, 6);
-            this.txt_PSign_Username.Name = "txt_PSign_Username";
-            this.txt_PSign_Username.Size = new System.Drawing.Size(425, 46);
-            this.txt_PSign_Username.TabIndex = 3;
-            // 
-            // txt_PSign_Phone_Number
-            // 
-            this.txt_PSign_Phone_Number.Location = new System.Drawing.Point(261, 321);
-            this.txt_PSign_Phone_Number.Name = "txt_PSign_Phone_Number";
-            this.txt_PSign_Phone_Number.Size = new System.Drawing.Size(425, 46);
-            this.txt_PSign_Phone_Number.TabIndex = 2;
-            // 
-            // txt_PSign_LastName
-            // 
-            this.txt_PSign_LastName.Location = new System.Drawing.Point(261, 214);
-            this.txt_PSign_LastName.Name = "txt_PSign_LastName";
-            this.txt_PSign_LastName.Size = new System.Drawing.Size(425, 46);
-            this.txt_PSign_LastName.TabIndex = 2;
             // 
             // label11
             // 
@@ -946,59 +610,181 @@
             this.btn_PAEV_Add.TabIndex = 1;
             this.btn_PAEV_Add.TabStop = false;
             // 
-            // listBox_PManage_Title
+            // panel_SignUp
             // 
-            this.listBox_PManage_Title.Dock = System.Windows.Forms.DockStyle.Top;
-            this.listBox_PManage_Title.FormattingEnabled = true;
-            this.listBox_PManage_Title.ItemHeight = 38;
-            this.listBox_PManage_Title.Location = new System.Drawing.Point(0, 0);
-            this.listBox_PManage_Title.Name = "listBox_PManage_Title";
-            this.listBox_PManage_Title.Size = new System.Drawing.Size(240, 346);
-            this.listBox_PManage_Title.TabIndex = 0;
+            this.panel_SignUp.BackColor = System.Drawing.Color.Transparent;
+            this.panel_SignUp.Controls.Add(this.btn_PSign_Back);
+            this.panel_SignUp.Controls.Add(this.btn_PSign_Add);
+            this.panel_SignUp.Controls.Add(this.label12);
+            this.panel_SignUp.Controls.Add(this.label13);
+            this.panel_SignUp.Controls.Add(this.label14);
+            this.panel_SignUp.Controls.Add(this.label18);
+            this.panel_SignUp.Controls.Add(this.label15);
+            this.panel_SignUp.Controls.Add(this.label17);
+            this.panel_SignUp.Controls.Add(this.label16);
+            this.panel_SignUp.Controls.Add(this.txt_PSign_PassWord);
+            this.panel_SignUp.Controls.Add(this.txt_PSign_CPassWord);
+            this.panel_SignUp.Controls.Add(this.txt_PSign_Email);
+            this.panel_SignUp.Controls.Add(this.txt_PSign_FirstName);
+            this.panel_SignUp.Controls.Add(this.txt_PSign_Username);
+            this.panel_SignUp.Controls.Add(this.txt_PSign_Phone_Number);
+            this.panel_SignUp.Controls.Add(this.txt_PSign_LastName);
+            this.panel_SignUp.Location = new System.Drawing.Point(562, 232);
+            this.panel_SignUp.Name = "panel_SignUp";
+            this.panel_SignUp.Size = new System.Drawing.Size(240, 160);
+            this.panel_SignUp.TabIndex = 13;
             // 
-            // btn_PManager_View
+            // btn_PSign_Back
             // 
-            this.btn_PManager_View.BackColor = System.Drawing.Color.Transparent;
-            this.btn_PManager_View.Image = global::manpass.Properties.Resources.eye;
-            this.btn_PManager_View.Location = new System.Drawing.Point(28, 381);
-            this.btn_PManager_View.Name = "btn_PManager_View";
-            this.btn_PManager_View.Size = new System.Drawing.Size(62, 50);
-            this.btn_PManager_View.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_PManager_View.TabIndex = 1;
-            this.btn_PManager_View.TabStop = false;
+            this.btn_PSign_Back.BackColor = System.Drawing.Color.Transparent;
+            this.btn_PSign_Back.Image = global::manpass.Properties.Resources.remove;
+            this.btn_PSign_Back.Location = new System.Drawing.Point(164, 391);
+            this.btn_PSign_Back.Name = "btn_PSign_Back";
+            this.btn_PSign_Back.Size = new System.Drawing.Size(62, 50);
+            this.btn_PSign_Back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_PSign_Back.TabIndex = 1;
+            this.btn_PSign_Back.TabStop = false;
             // 
-            // btn_PManager_Edit
+            // btn_PSign_Add
             // 
-            this.btn_PManager_Edit.BackColor = System.Drawing.Color.Transparent;
-            this.btn_PManager_Edit.Image = global::manpass.Properties.Resources.edit;
-            this.btn_PManager_Edit.Location = new System.Drawing.Point(308, 381);
-            this.btn_PManager_Edit.Name = "btn_PManager_Edit";
-            this.btn_PManager_Edit.Size = new System.Drawing.Size(62, 50);
-            this.btn_PManager_Edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_PManager_Edit.TabIndex = 1;
-            this.btn_PManager_Edit.TabStop = false;
+            this.btn_PSign_Add.BackColor = System.Drawing.Color.Transparent;
+            this.btn_PSign_Add.Image = global::manpass.Properties.Resources.add;
+            this.btn_PSign_Add.Location = new System.Drawing.Point(96, 391);
+            this.btn_PSign_Add.Name = "btn_PSign_Add";
+            this.btn_PSign_Add.Size = new System.Drawing.Size(62, 50);
+            this.btn_PSign_Add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_PSign_Add.TabIndex = 1;
+            this.btn_PSign_Add.TabStop = false;
             // 
-            // btn_PManager_Delete
+            // label12
             // 
-            this.btn_PManager_Delete.BackColor = System.Drawing.Color.Transparent;
-            this.btn_PManager_Delete.Image = global::manpass.Properties.Resources.remove;
-            this.btn_PManager_Delete.Location = new System.Drawing.Point(216, 381);
-            this.btn_PManager_Delete.Name = "btn_PManager_Delete";
-            this.btn_PManager_Delete.Size = new System.Drawing.Size(62, 50);
-            this.btn_PManager_Delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_PManager_Delete.TabIndex = 1;
-            this.btn_PManager_Delete.TabStop = false;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(31, 113);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(127, 38);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Confrim";
             // 
-            // btn_PManager_Add
+            // label13
             // 
-            this.btn_PManager_Add.BackColor = System.Drawing.Color.Transparent;
-            this.btn_PManager_Add.Image = global::manpass.Properties.Resources.add;
-            this.btn_PManager_Add.Location = new System.Drawing.Point(124, 381);
-            this.btn_PManager_Add.Name = "btn_PManager_Add";
-            this.btn_PManager_Add.Size = new System.Drawing.Size(62, 50);
-            this.btn_PManager_Add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_PManager_Add.TabIndex = 1;
-            this.btn_PManager_Add.TabStop = false;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(31, 61);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(137, 38);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "PassWord";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(31, 9);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(145, 38);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "UserName";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(30, 272);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(110, 38);
+            this.label18.TabIndex = 9;
+            this.label18.Text = "E-Mail";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(30, 165);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(158, 38);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "First Name";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(30, 324);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(213, 38);
+            this.label17.TabIndex = 8;
+            this.label17.Text = "Phone Number";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(30, 217);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(153, 38);
+            this.label16.TabIndex = 8;
+            this.label16.Text = "Last Name";
+            // 
+            // txt_PSign_PassWord
+            // 
+            this.txt_PSign_PassWord.Location = new System.Drawing.Point(261, 58);
+            this.txt_PSign_PassWord.Name = "txt_PSign_PassWord";
+            this.txt_PSign_PassWord.PasswordChar = '*';
+            this.txt_PSign_PassWord.Size = new System.Drawing.Size(425, 46);
+            this.txt_PSign_PassWord.TabIndex = 6;
+            // 
+            // txt_PSign_CPassWord
+            // 
+            this.txt_PSign_CPassWord.Location = new System.Drawing.Point(261, 110);
+            this.txt_PSign_CPassWord.Name = "txt_PSign_CPassWord";
+            this.txt_PSign_CPassWord.Size = new System.Drawing.Size(425, 46);
+            this.txt_PSign_CPassWord.TabIndex = 5;
+            // 
+            // txt_PSign_Email
+            // 
+            this.txt_PSign_Email.Location = new System.Drawing.Point(261, 269);
+            this.txt_PSign_Email.Name = "txt_PSign_Email";
+            this.txt_PSign_Email.Size = new System.Drawing.Size(425, 46);
+            this.txt_PSign_Email.TabIndex = 4;
+            // 
+            // txt_PSign_FirstName
+            // 
+            this.txt_PSign_FirstName.Location = new System.Drawing.Point(261, 162);
+            this.txt_PSign_FirstName.Name = "txt_PSign_FirstName";
+            this.txt_PSign_FirstName.Size = new System.Drawing.Size(425, 46);
+            this.txt_PSign_FirstName.TabIndex = 4;
+            // 
+            // txt_PSign_Username
+            // 
+            this.txt_PSign_Username.Location = new System.Drawing.Point(261, 6);
+            this.txt_PSign_Username.Name = "txt_PSign_Username";
+            this.txt_PSign_Username.Size = new System.Drawing.Size(425, 46);
+            this.txt_PSign_Username.TabIndex = 3;
+            // 
+            // txt_PSign_Phone_Number
+            // 
+            this.txt_PSign_Phone_Number.Location = new System.Drawing.Point(261, 321);
+            this.txt_PSign_Phone_Number.Name = "txt_PSign_Phone_Number";
+            this.txt_PSign_Phone_Number.Size = new System.Drawing.Size(425, 46);
+            this.txt_PSign_Phone_Number.TabIndex = 2;
+            // 
+            // txt_PSign_LastName
+            // 
+            this.txt_PSign_LastName.Location = new System.Drawing.Point(261, 214);
+            this.txt_PSign_LastName.Name = "txt_PSign_LastName";
+            this.txt_PSign_LastName.Size = new System.Drawing.Size(425, 46);
+            this.txt_PSign_LastName.TabIndex = 2;
+            // 
+            // panel_Setting
+            // 
+            this.panel_Setting.BackColor = System.Drawing.Color.Transparent;
+            this.panel_Setting.Controls.Add(this.groupBox_PSetting_Background);
+            this.panel_Setting.Controls.Add(this.label23);
+            this.panel_Setting.Controls.Add(this.label22);
+            this.panel_Setting.Controls.Add(this.label21);
+            this.panel_Setting.Controls.Add(this.label20);
+            this.panel_Setting.Controls.Add(this.btn_PSetting_Import);
+            this.panel_Setting.Controls.Add(this.btn_PSetting_ExportDB);
+            this.panel_Setting.Controls.Add(this.btn_PSetting_Edit_ProFile);
+            this.panel_Setting.Controls.Add(this.btn_PSetting_EditPassWord);
+            this.panel_Setting.Location = new System.Drawing.Point(72, 229);
+            this.panel_Setting.Name = "panel_Setting";
+            this.panel_Setting.Size = new System.Drawing.Size(240, 160);
+            this.panel_Setting.TabIndex = 14;
             // 
             // groupBox_PSetting_Background
             // 
@@ -1018,6 +804,220 @@
             this.groupBox_PSetting_Background.TabIndex = 8;
             this.groupBox_PSetting_Background.TabStop = false;
             this.groupBox_PSetting_Background.Text = "Background";
+            // 
+            // pic_PSetting_Background5
+            // 
+            this.pic_PSetting_Background5.BackColor = System.Drawing.Color.Transparent;
+            this.pic_PSetting_Background5.Image = global::manpass.Properties.Resources.background5;
+            this.pic_PSetting_Background5.Location = new System.Drawing.Point(415, 59);
+            this.pic_PSetting_Background5.Name = "pic_PSetting_Background5";
+            this.pic_PSetting_Background5.Size = new System.Drawing.Size(62, 50);
+            this.pic_PSetting_Background5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_PSetting_Background5.TabIndex = 1;
+            this.pic_PSetting_Background5.TabStop = false;
+            // 
+            // rBtn_PSetting_Background2
+            // 
+            this.rBtn_PSetting_Background2.AutoSize = true;
+            this.rBtn_PSetting_Background2.Location = new System.Drawing.Point(101, 77);
+            this.rBtn_PSetting_Background2.Name = "rBtn_PSetting_Background2";
+            this.rBtn_PSetting_Background2.Size = new System.Drawing.Size(14, 13);
+            this.rBtn_PSetting_Background2.TabIndex = 3;
+            this.rBtn_PSetting_Background2.UseVisualStyleBackColor = true;
+            // 
+            // rBtn_PSetting_Background
+            // 
+            this.rBtn_PSetting_Background.AutoSize = true;
+            this.rBtn_PSetting_Background.Checked = true;
+            this.rBtn_PSetting_Background.Location = new System.Drawing.Point(2, 77);
+            this.rBtn_PSetting_Background.Name = "rBtn_PSetting_Background";
+            this.rBtn_PSetting_Background.Size = new System.Drawing.Size(14, 13);
+            this.rBtn_PSetting_Background.TabIndex = 3;
+            this.rBtn_PSetting_Background.TabStop = true;
+            this.rBtn_PSetting_Background.UseVisualStyleBackColor = true;
+            // 
+            // pic_PSetting_Background
+            // 
+            this.pic_PSetting_Background.BackColor = System.Drawing.Color.Transparent;
+            this.pic_PSetting_Background.Image = global::manpass.Properties.Resources.background;
+            this.pic_PSetting_Background.Location = new System.Drawing.Point(27, 59);
+            this.pic_PSetting_Background.Name = "pic_PSetting_Background";
+            this.pic_PSetting_Background.Size = new System.Drawing.Size(62, 50);
+            this.pic_PSetting_Background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_PSetting_Background.TabIndex = 1;
+            this.pic_PSetting_Background.TabStop = false;
+            // 
+            // pic_PSetting_Background2
+            // 
+            this.pic_PSetting_Background2.BackColor = System.Drawing.Color.Transparent;
+            this.pic_PSetting_Background2.Image = global::manpass.Properties.Resources.background2;
+            this.pic_PSetting_Background2.Location = new System.Drawing.Point(128, 59);
+            this.pic_PSetting_Background2.Name = "pic_PSetting_Background2";
+            this.pic_PSetting_Background2.Size = new System.Drawing.Size(62, 50);
+            this.pic_PSetting_Background2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_PSetting_Background2.TabIndex = 1;
+            this.pic_PSetting_Background2.TabStop = false;
+            // 
+            // rBtn_PSetting_Background4
+            // 
+            this.rBtn_PSetting_Background4.AutoSize = true;
+            this.rBtn_PSetting_Background4.Location = new System.Drawing.Point(293, 78);
+            this.rBtn_PSetting_Background4.Name = "rBtn_PSetting_Background4";
+            this.rBtn_PSetting_Background4.Size = new System.Drawing.Size(14, 13);
+            this.rBtn_PSetting_Background4.TabIndex = 6;
+            this.rBtn_PSetting_Background4.UseVisualStyleBackColor = true;
+            // 
+            // pic_PSetting_Background3
+            // 
+            this.pic_PSetting_Background3.BackColor = System.Drawing.Color.Transparent;
+            this.pic_PSetting_Background3.Image = global::manpass.Properties.Resources.background3;
+            this.pic_PSetting_Background3.Location = new System.Drawing.Point(216, 59);
+            this.pic_PSetting_Background3.Name = "pic_PSetting_Background3";
+            this.pic_PSetting_Background3.Size = new System.Drawing.Size(62, 50);
+            this.pic_PSetting_Background3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_PSetting_Background3.TabIndex = 1;
+            this.pic_PSetting_Background3.TabStop = false;
+            // 
+            // rBtn_PSetting_Background5
+            // 
+            this.rBtn_PSetting_Background5.AutoSize = true;
+            this.rBtn_PSetting_Background5.Location = new System.Drawing.Point(389, 77);
+            this.rBtn_PSetting_Background5.Name = "rBtn_PSetting_Background5";
+            this.rBtn_PSetting_Background5.Size = new System.Drawing.Size(14, 13);
+            this.rBtn_PSetting_Background5.TabIndex = 5;
+            this.rBtn_PSetting_Background5.UseVisualStyleBackColor = true;
+            // 
+            // pic_PSetting_Background4
+            // 
+            this.pic_PSetting_Background4.BackColor = System.Drawing.Color.Transparent;
+            this.pic_PSetting_Background4.Image = global::manpass.Properties.Resources.background4;
+            this.pic_PSetting_Background4.Location = new System.Drawing.Point(313, 59);
+            this.pic_PSetting_Background4.Name = "pic_PSetting_Background4";
+            this.pic_PSetting_Background4.Size = new System.Drawing.Size(62, 50);
+            this.pic_PSetting_Background4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_PSetting_Background4.TabIndex = 1;
+            this.pic_PSetting_Background4.TabStop = false;
+            // 
+            // rBtn_PSetting_Background3
+            // 
+            this.rBtn_PSetting_Background3.AutoSize = true;
+            this.rBtn_PSetting_Background3.Location = new System.Drawing.Point(196, 77);
+            this.rBtn_PSetting_Background3.Name = "rBtn_PSetting_Background3";
+            this.rBtn_PSetting_Background3.Size = new System.Drawing.Size(14, 13);
+            this.rBtn_PSetting_Background3.TabIndex = 4;
+            this.rBtn_PSetting_Background3.UseVisualStyleBackColor = true;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(481, 201);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(204, 38);
+            this.label23.TabIndex = 7;
+            this.label23.Text = "Edit PassWord";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(288, 201);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(175, 38);
+            this.label22.TabIndex = 7;
+            this.label22.Text = "Edit ProFile";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(167, 201);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(103, 38);
+            this.label21.TabIndex = 7;
+            this.label21.Text = "Export";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(46, 201);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(101, 38);
+            this.label20.TabIndex = 7;
+            this.label20.Text = "Import";
+            // 
+            // btn_PSetting_Import
+            // 
+            this.btn_PSetting_Import.BackColor = System.Drawing.Color.Transparent;
+            this.btn_PSetting_Import.Image = global::manpass.Properties.Resources.inport;
+            this.btn_PSetting_Import.Location = new System.Drawing.Point(62, 242);
+            this.btn_PSetting_Import.Name = "btn_PSetting_Import";
+            this.btn_PSetting_Import.Size = new System.Drawing.Size(64, 50);
+            this.btn_PSetting_Import.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_PSetting_Import.TabIndex = 1;
+            this.btn_PSetting_Import.TabStop = false;
+            // 
+            // btn_PSetting_ExportDB
+            // 
+            this.btn_PSetting_ExportDB.BackColor = System.Drawing.Color.Transparent;
+            this.btn_PSetting_ExportDB.Image = global::manpass.Properties.Resources.export;
+            this.btn_PSetting_ExportDB.Location = new System.Drawing.Point(182, 242);
+            this.btn_PSetting_ExportDB.Name = "btn_PSetting_ExportDB";
+            this.btn_PSetting_ExportDB.Size = new System.Drawing.Size(64, 50);
+            this.btn_PSetting_ExportDB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_PSetting_ExportDB.TabIndex = 1;
+            this.btn_PSetting_ExportDB.TabStop = false;
+            // 
+            // btn_PSetting_Edit_ProFile
+            // 
+            this.btn_PSetting_Edit_ProFile.BackColor = System.Drawing.Color.Transparent;
+            this.btn_PSetting_Edit_ProFile.Image = global::manpass.Properties.Resources.profile;
+            this.btn_PSetting_Edit_ProFile.Location = new System.Drawing.Point(344, 242);
+            this.btn_PSetting_Edit_ProFile.Name = "btn_PSetting_Edit_ProFile";
+            this.btn_PSetting_Edit_ProFile.Size = new System.Drawing.Size(62, 50);
+            this.btn_PSetting_Edit_ProFile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_PSetting_Edit_ProFile.TabIndex = 1;
+            this.btn_PSetting_Edit_ProFile.TabStop = false;
+            // 
+            // btn_PSetting_EditPassWord
+            // 
+            this.btn_PSetting_EditPassWord.BackColor = System.Drawing.Color.Transparent;
+            this.btn_PSetting_EditPassWord.Image = global::manpass.Properties.Resources.login;
+            this.btn_PSetting_EditPassWord.Location = new System.Drawing.Point(552, 242);
+            this.btn_PSetting_EditPassWord.Name = "btn_PSetting_EditPassWord";
+            this.btn_PSetting_EditPassWord.Size = new System.Drawing.Size(62, 50);
+            this.btn_PSetting_EditPassWord.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_PSetting_EditPassWord.TabIndex = 1;
+            this.btn_PSetting_EditPassWord.TabStop = false;
+            // 
+            // panel_Help
+            // 
+            this.panel_Help.BackColor = System.Drawing.Color.Transparent;
+            this.panel_Help.Controls.Add(this.btn_PHelp_About);
+            this.panel_Help.Controls.Add(this.btn_PHelp_Help);
+            this.panel_Help.Location = new System.Drawing.Point(562, 64);
+            this.panel_Help.Name = "panel_Help";
+            this.panel_Help.Size = new System.Drawing.Size(240, 160);
+            this.panel_Help.TabIndex = 15;
+            // 
+            // btn_PHelp_About
+            // 
+            this.btn_PHelp_About.BackColor = System.Drawing.Color.Transparent;
+            this.btn_PHelp_About.Image = global::manpass.Properties.Resources.about;
+            this.btn_PHelp_About.Location = new System.Drawing.Point(134, 148);
+            this.btn_PHelp_About.Name = "btn_PHelp_About";
+            this.btn_PHelp_About.Size = new System.Drawing.Size(182, 140);
+            this.btn_PHelp_About.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_PHelp_About.TabIndex = 1;
+            this.btn_PHelp_About.TabStop = false;
+            // 
+            // btn_PHelp_Help
+            // 
+            this.btn_PHelp_Help.BackColor = System.Drawing.Color.Transparent;
+            this.btn_PHelp_Help.Image = global::manpass.Properties.Resources.help;
+            this.btn_PHelp_Help.Location = new System.Drawing.Point(374, 148);
+            this.btn_PHelp_Help.Name = "btn_PHelp_Help";
+            this.btn_PHelp_Help.Size = new System.Drawing.Size(182, 140);
+            this.btn_PHelp_Help.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_PHelp_Help.TabIndex = 1;
+            this.btn_PHelp_Help.TabStop = false;
             // 
             // frm_Main
             // 
@@ -1041,6 +1041,7 @@
             this.Name = "frm_Main";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Frm_Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Icon)).EndInit();
             this.panel_Left.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_PLeft_Login)).EndInit();
@@ -1052,26 +1053,12 @@
             this.panel_Login.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PLog_Show)).EndInit();
             this.panel_Manager.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PManager_View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PManager_Edit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PManager_Delete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PManager_Add)).EndInit();
             this.panel_Add_Edit_View.ResumeLayout(false);
             this.panel_Add_Edit_View.PerformLayout();
-            this.panel_SignUp.ResumeLayout(false);
-            this.panel_SignUp.PerformLayout();
-            this.panel_Setting.ResumeLayout(false);
-            this.panel_Setting.PerformLayout();
-            this.panel_Help.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PHelp_About)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PHelp_Help)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_PSetting_Background5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_PSetting_Background4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_PSetting_Background3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_PSetting_Background2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_PSetting_Background)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PSetting_Import)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PSetting_ExportDB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PSetting_Edit_ProFile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PSetting_EditPassWord)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PSign_Back)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PSign_Add)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PAEV_Random)).EndInit();
             this.groupBox_PAEV_Random.ResumeLayout(false);
             this.groupBox_PAEV_Random.PerformLayout();
@@ -1081,12 +1068,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_PAEV_Down)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PAEV_Edit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PAEV_Add)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PManager_View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PManager_Edit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PManager_Delete)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PManager_Add)).EndInit();
+            this.panel_SignUp.ResumeLayout(false);
+            this.panel_SignUp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PSign_Back)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PSign_Add)).EndInit();
+            this.panel_Setting.ResumeLayout(false);
+            this.panel_Setting.PerformLayout();
             this.groupBox_PSetting_Background.ResumeLayout(false);
             this.groupBox_PSetting_Background.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_PSetting_Background5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_PSetting_Background)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_PSetting_Background2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_PSetting_Background3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_PSetting_Background4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PSetting_Import)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PSetting_ExportDB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PSetting_Edit_ProFile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PSetting_EditPassWord)).EndInit();
+            this.panel_Help.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PHelp_About)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PHelp_Help)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -31,5 +31,18 @@ namespace manpass
             panel_SignUp.Size = new Size(715, 453);
 
         }
+
+        private void Frm_Main_Load(object sender, EventArgs e)
+        {
+            btn_PLeft_Manager.Visible = false;
+            btn_PLeft_Setting.Visible = false;
+            panel_Add_Edit_View.Visible =false;
+            panel_Help.Visible =false;
+            panel_Login.Visible =true;
+            panel_Manager.Visible =false;
+            panel_Setting.Visible =false;
+            panel_SignUp.Visible =false;
+
+        }
     }
 }
