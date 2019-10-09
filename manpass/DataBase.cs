@@ -72,7 +72,7 @@ namespace manpass
         }
         ~ DataBase()
         {
-            m_dbConnection.Close();
+
         }
 
         private static void CreateFileDB(string name)
