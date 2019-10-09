@@ -12,9 +12,11 @@ namespace manpass
 {
     public partial class frm_Main : Form
     {
+        DataBase DB;
         public frm_Main()
         {
             InitializeComponent();
+            DB = new DataBase();
             //set location 
             panel_Add_Edit_View.Location = new Point(71, 64);
             panel_Help.Location = new Point(71, 64);
