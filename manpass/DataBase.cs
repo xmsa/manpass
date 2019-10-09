@@ -101,7 +101,7 @@ namespace manpass
 
             foreach (KeyValuePair<string, string> item in dict)
             {
-                tostr += (item.Key + str +"'"+ item.Value+"'" + " , ");
+                tostr += (item.Key + str + "'" + item.Value + "'" + " , ");
                 flag = true;
 
             }
@@ -139,7 +139,54 @@ namespace manpass
             str = " ( " + key + " ) values ( " + value + " ) ";
             return str;
         }
-        
 
+        private DataTable search( string tbl, Dictionary<string, string> dict, List<string> lst)
+        {
+            m_dbConnection.Open();
+            string strwhere = string.Empty;
+            string strcolumn = "*";
+
+            if (dict.Count != 0)
+            {
+                strwhere = " where " + dicttostr(dict);
+            }
+            if (lst.Count != 0)
+            {
+                strcolumn = lsttostr(lst);
+            }
+
+            string str = "select " + strcolumn + " from " + tbl + strwhere;
+            SQLiteCommand command = new SQLiteCommand(str, m_dbConnection);
+
+
+            DataTable dt = new DataTable();
+            SQLiteDataAdapter da = new SQLiteDataAdapter(str, m_dbConnection);
+
+            da.Fill(dt);
+
+
+            m_dbConnection.Close();
+            return dt;
+        }
+
+        private static string lsttostr(List<string> lst)
+        {
+            string str = string.Empty;
+            foreach (var item in lst)
+            {
+                str += item + " , ";
+            }
+            return str.Remove(str.Length - 2);
+        }
+
+        private static string dicttostr(Dictionary<string, string> dict)
+        {
+            string str = string.Empty;
+            foreach (var item in dict)
+            {
+                str += item.Key + " = '" + item.Value + "' , ";
+            }
+            return str.Remove(str.Length - 2);
+        }
     }
 }
