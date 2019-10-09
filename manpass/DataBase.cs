@@ -14,7 +14,7 @@ namespace manpass
         SQLiteConnection m_dbConnection;
         public DataBase()
         {
-            if (!File.Exists(Application.StartupPath + @"DataBase.sqlite"))
+            if (!File.Exists(Application.StartupPath.ToString() + @"\DataBase.sqlite"))
             {
                 var message=MessageBox.Show("Build a new DataBase \"Yes\" \nImport the DataBase \"No\"", "DataBase not found",MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (message==DialogResult.Yes)
