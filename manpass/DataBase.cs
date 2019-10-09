@@ -61,8 +61,12 @@ namespace manpass
                         System.IO.File.Move(path, Application.StartupPath.ToString() + @"\DataBase.sqlite");
 
                     }
+
                 }
+
             }
+            m_dbConnection = ConnectionDB("DataBase");
+
         }
 
         private static void CreateFileDB(string name)
@@ -99,6 +103,35 @@ namespace manpass
             if (flag)
                 tostr = tostr.Remove(tostr.Length - 2);
             return tostr;
+        }
+        public void insert(string tbl, Dictionary<string, string> dict)
+        {
+
+            m_dbConnection.Open();
+            string str = dictostr_in(dict);
+            string sql = "insert into " + tbl+str;
+            SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
+            command.ExecuteNonQuery(); 
+            m_dbConnection.Close();
+
+        }
+
+        private static string dictostr_in(Dictionary<string, string> dict)
+        {
+            string str = string.Empty;
+            string key = string.Empty;
+            string value = string.Empty;
+
+            foreach (KeyValuePair<string, string> item in dict)
+            {
+                key += item.Key + " , ";
+                value += "'" + item.Value + "',";
+            }
+            key = key.Remove(key.Length - 2);
+            value = value.Remove(value.Length - 1);
+
+            str = " ( " + key + " ) values ( " + value + " ) ";
+            return str;
         }
     }
 }
