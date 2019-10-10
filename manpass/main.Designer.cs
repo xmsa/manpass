@@ -309,6 +309,7 @@
             this.btn_PLog_SignUp.TabIndex = 3;
             this.btn_PLog_SignUp.Text = "SignUp";
             this.btn_PLog_SignUp.UseVisualStyleBackColor = true;
+            this.btn_PLog_SignUp.Click += new System.EventHandler(this.Btn_PLog_SignUp_Click);
             // 
             // btn_PLog_ForGetPassWord
             // 
