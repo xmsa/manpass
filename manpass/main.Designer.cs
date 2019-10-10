@@ -653,6 +653,7 @@
             this.btn_PSign_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_PSign_back.TabIndex = 1;
             this.btn_PSign_back.TabStop = false;
+            this.btn_PSign_back.Click += new System.EventHandler(this.Btn_PSign_back_Click);
             // 
             // btn_PSign_clear
             // 
