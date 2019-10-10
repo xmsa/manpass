@@ -384,5 +384,43 @@ namespace manpass
             }
             return false;
         }
+
+        private void Btn_PSetting_Import_Click(object sender, EventArgs e)
+        {
+            bool flag;
+                string path = string.Empty;
+                flag = frm_Main.openfile(ref path, "DataBase|DataBase.sqlite");
+            if (!flag)
+            {
+                MessageBox.Show("Please log in again", "Warning", MessageBoxButtons. OK, MessageBoxIcon.Warning) ;
+                System.IO.File.Copy(path, Application.StartupPath.ToString() + @"\DataBase.sqlite", true);
+
+                btn_PLeft_Manager.Visible = false;
+                btn_PLeft_Setting.Visible = false;
+                btn_PLeft_Login.Visible = true;
+
+                panel_Add_Edit_View.Visible = false;
+                panel_Help.Visible = false;
+                panel_Login.Visible = true;
+                panel_Manager.Visible = false;
+                panel_Setting.Visible = false;
+                panel_SignUp.Visible = false;
+
+                txt_PLog_UserName.Text=string.Empty;
+                txt_PLog_PassWord.Text = string.Empty;
+                txt_PSign_CPassWord.Text=string.Empty;
+                txt_PSign_Email.Text=string.Empty;
+                txt_PSign_FirstName.Text=string.Empty;
+                txt_PSign_LastName.Text=string.Empty;
+                txt_PSign_PassWord.Text=string.Empty;
+                txt_PSign_Phone_Number.Text=string.Empty;
+                txt_PSign_Username.Text=string.Empty;
+
+
+
+
+            }
+
+        }
     }
 }
