@@ -397,11 +397,11 @@ namespace manpass
         private void Btn_PSetting_Import_Click(object sender, EventArgs e)
         {
             bool flag;
-                string path = string.Empty;
-                flag = frm_Main.openfile(ref path, "DataBase|DataBase.sqlite");
+            string path = string.Empty;
+            flag = frm_Main.openfile(ref path, "DataBase|DataBase.sqlite");
             if (!flag)
             {
-                MessageBox.Show("Please log in again", "Warning", MessageBoxButtons. OK, MessageBoxIcon.Warning) ;
+                MessageBox.Show("Please log in again", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 System.IO.File.Copy(path, Application.StartupPath.ToString() + @"\DataBase.sqlite", true);
 
                 btn_PLeft_Manager.Visible = false;
@@ -417,15 +417,15 @@ namespace manpass
                 panel_Change_Password.Visible = false;
 
 
-                txt_PLog_UserName.Text=string.Empty;
+                txt_PLog_UserName.Text = string.Empty;
                 txt_PLog_PassWord.Text = string.Empty;
-                txt_PSign_CPassWord.Text=string.Empty;
-                txt_PSign_Email.Text=string.Empty;
-                txt_PSign_FirstName.Text=string.Empty;
-                txt_PSign_LastName.Text=string.Empty;
-                txt_PSign_PassWord.Text=string.Empty;
-                txt_PSign_Phone_Number.Text=string.Empty;
-                txt_PSign_Username.Text=string.Empty;
+                txt_PSign_CPassWord.Text = string.Empty;
+                txt_PSign_Email.Text = string.Empty;
+                txt_PSign_FirstName.Text = string.Empty;
+                txt_PSign_LastName.Text = string.Empty;
+                txt_PSign_PassWord.Text = string.Empty;
+                txt_PSign_Phone_Number.Text = string.Empty;
+                txt_PSign_Username.Text = string.Empty;
 
 
 
@@ -448,6 +448,9 @@ namespace manpass
             btn_PLeft_Login.Visible = false;
             btn_PLeft_Manager.Visible = false;
             btn_PLeft_Setting.Visible = false;
+            txt_PChPass_CPassword.Clear();
+            txt_PChPass_NPassword.Clear();
+            txt_PChPass_Password.Clear();
 
         }
 
@@ -482,6 +485,63 @@ namespace manpass
         private void Btn_PChPass_Ok_Click(object sender, EventArgs e)
         {
 
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            
+            bool flag = false;
+            string error = string.Empty;
+            if (check_txt_Empty(txt_PChPass_Password))
+            {
+                error += "Password\n";
+                flag = true;
+            }
+            if (check_txt_Empty(txt_PChPass_NPassword))
+            {
+                error += "New Password\n";
+                flag = true;
+            }
+            if (check_txt_Empty(txt_PChPass_CPassword))
+            {
+                error += "Confirm\n";
+                flag = true;
+            }
+            if (flag)
+            {
+                MessageBox.Show(error + "fields are empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txt_PChPass_NPassword.Text.Length < 8)
+            {
+                MessageBox.Show("Use 8 characters or more for your password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txt_PChPass_CPassword.Text != txt_PChPass_NPassword.Text)
+            {
+                MessageBox.Show("Those passwords didn't match. Try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            List<string> lst = new List<string>();
+            dict.Add("User", user);
+            var rows = DB.search("tb_user", dict, lst).Rows;
+
+            if (rows[0][1].ToString() == txt_PChPass_Password.Text)
+            {
+                dict.Clear();
+                dict.Add("Password", txt_PChPass_NPassword.Text);
+                DB.update("tb_user", user, dict);
+                panel_Change_Password.Visible = false;
+                panel_Setting.Visible = true;
+                panel_Change_Password.Visible = false;
+                btn_PLeft_Exit.Visible = true;
+                btn_PLeft_Help.Visible = true;
+                btn_PLeft_Login.Visible = false;
+                btn_PLeft_Manager.Visible = true;
+                btn_PLeft_Setting.Visible = true;
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Wrong password. ");
+            }
         }
 
         private void show(TextBox txt)
@@ -491,6 +551,6 @@ namespace manpass
             else
                 txt.PasswordChar = '*';
         }
-        
+
     }
 }

@@ -1088,9 +1088,9 @@
             this.panel_Change_Password.Controls.Add(this.txt_PChPass_Password);
             this.panel_Change_Password.Controls.Add(this.btn_PChPass_Cancel);
             this.panel_Change_Password.Controls.Add(this.btn_PChPass_Ok);
-            this.panel_Change_Password.Location = new System.Drawing.Point(72, 403);
+            this.panel_Change_Password.Location = new System.Drawing.Point(72, 406);
             this.panel_Change_Password.Name = "panel_Change_Password";
-            this.panel_Change_Password.Size = new System.Drawing.Size(240, 161);
+            this.panel_Change_Password.Size = new System.Drawing.Size(240, 157);
             this.panel_Change_Password.TabIndex = 9;
             // 
             // btn_PChPass_ShowCPass
@@ -1162,7 +1162,7 @@
             this.txt_PChPass_CPassword.Name = "txt_PChPass_CPassword";
             this.txt_PChPass_CPassword.PasswordChar = '*';
             this.txt_PChPass_CPassword.Size = new System.Drawing.Size(349, 46);
-            this.txt_PChPass_CPassword.TabIndex = 6;
+            this.txt_PChPass_CPassword.TabIndex = 3;
             // 
             // txt_PChPass_NPassword
             // 
@@ -1170,7 +1170,7 @@
             this.txt_PChPass_NPassword.Name = "txt_PChPass_NPassword";
             this.txt_PChPass_NPassword.PasswordChar = '*';
             this.txt_PChPass_NPassword.Size = new System.Drawing.Size(349, 46);
-            this.txt_PChPass_NPassword.TabIndex = 6;
+            this.txt_PChPass_NPassword.TabIndex = 2;
             // 
             // txt_PChPass_Password
             // 
@@ -1178,7 +1178,7 @@
             this.txt_PChPass_Password.Name = "txt_PChPass_Password";
             this.txt_PChPass_Password.PasswordChar = '*';
             this.txt_PChPass_Password.Size = new System.Drawing.Size(349, 46);
-            this.txt_PChPass_Password.TabIndex = 5;
+            this.txt_PChPass_Password.TabIndex = 1;
             // 
             // btn_PChPass_Cancel
             // 
@@ -1186,7 +1186,7 @@
             this.btn_PChPass_Cancel.Location = new System.Drawing.Point(351, 298);
             this.btn_PChPass_Cancel.Name = "btn_PChPass_Cancel";
             this.btn_PChPass_Cancel.Size = new System.Drawing.Size(137, 46);
-            this.btn_PChPass_Cancel.TabIndex = 3;
+            this.btn_PChPass_Cancel.TabIndex = 5;
             this.btn_PChPass_Cancel.Text = "Cancel";
             this.btn_PChPass_Cancel.UseVisualStyleBackColor = true;
             this.btn_PChPass_Cancel.Click += new System.EventHandler(this.Btn_ChPass_Cancel_Click);
@@ -1197,7 +1197,7 @@
             this.btn_PChPass_Ok.Location = new System.Drawing.Point(208, 298);
             this.btn_PChPass_Ok.Name = "btn_PChPass_Ok";
             this.btn_PChPass_Ok.Size = new System.Drawing.Size(137, 46);
-            this.btn_PChPass_Ok.TabIndex = 1;
+            this.btn_PChPass_Ok.TabIndex = 4;
             this.btn_PChPass_Ok.Text = "Ok";
             this.btn_PChPass_Ok.UseVisualStyleBackColor = true;
             this.btn_PChPass_Ok.Click += new System.EventHandler(this.Btn_PChPass_Ok_Click);
