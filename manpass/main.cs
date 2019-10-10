@@ -304,5 +304,61 @@ namespace manpass
                 MessageBox.Show("Couldn't find your UserName");
             }
         }
+
+        
+
+        private void Pic_PSetting_Background_Click(object sender, EventArgs e)
+        {
+            rBtn_PSetting_Background.Checked = true;
+
+        }
+
+        private void Pic_PSetting_Background2_Click(object sender, EventArgs e)
+        {
+            rBtn_PSetting_Background2.Checked = true;
+
+        }
+
+        private void Pic_PSetting_Background3_Click(object sender, EventArgs e)
+        {
+            rBtn_PSetting_Background3.Checked = true;
+
+        }
+
+        private void Pic_PSetting_Background4_Click(object sender, EventArgs e)
+        {
+            rBtn_PSetting_Background4.Checked = true;
+
+        }
+
+        private void Pic_PSetting_Background5_Click(object sender, EventArgs e)
+        {
+            rBtn_PSetting_Background5.Checked = true;
+        }
+
+        private void RBtn_PSetting_Background_CheckedChanged(object sender, EventArgs e)
+        {
+            this.BackgroundImage = Properties.Resources.background;
+        }
+
+        private void RBtn_PSetting_Background2_CheckedChanged(object sender, EventArgs e)
+        {
+            this.BackgroundImage = Properties.Resources.background2;
+        }
+
+        private void RBtn_PSetting_Background3_CheckedChanged(object sender, EventArgs e)
+        {
+            this.BackgroundImage = Properties.Resources.background3;
+        }
+
+        private void RBtn_PSetting_Background4_CheckedChanged(object sender, EventArgs e)
+        {
+            this.BackgroundImage = Properties.Resources.background4;
+        }
+
+        private void RBtn_PSetting_Background5_CheckedChanged(object sender, EventArgs e)
+        {
+            this.BackgroundImage = Properties.Resources.background5;
+        }
     }
 }

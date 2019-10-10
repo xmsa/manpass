@@ -809,7 +809,7 @@
             this.panel_Setting.Controls.Add(this.btn_PSetting_EditPassWord);
             this.panel_Setting.Location = new System.Drawing.Point(72, 229);
             this.panel_Setting.Name = "panel_Setting";
-            this.panel_Setting.Size = new System.Drawing.Size(240, 160);
+            this.panel_Setting.Size = new System.Drawing.Size(648, 160);
             this.panel_Setting.TabIndex = 14;
             // 
             // groupBox_PSetting_Background
@@ -841,6 +841,7 @@
             this.pic_PSetting_Background5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_PSetting_Background5.TabIndex = 1;
             this.pic_PSetting_Background5.TabStop = false;
+            this.pic_PSetting_Background5.Click += new System.EventHandler(this.Pic_PSetting_Background5_Click);
             // 
             // rBtn_PSetting_Background2
             // 
@@ -850,6 +851,7 @@
             this.rBtn_PSetting_Background2.Size = new System.Drawing.Size(14, 13);
             this.rBtn_PSetting_Background2.TabIndex = 3;
             this.rBtn_PSetting_Background2.UseVisualStyleBackColor = true;
+            this.rBtn_PSetting_Background2.CheckedChanged += new System.EventHandler(this.RBtn_PSetting_Background2_CheckedChanged);
             // 
             // rBtn_PSetting_Background
             // 
@@ -861,6 +863,7 @@
             this.rBtn_PSetting_Background.TabIndex = 3;
             this.rBtn_PSetting_Background.TabStop = true;
             this.rBtn_PSetting_Background.UseVisualStyleBackColor = true;
+            this.rBtn_PSetting_Background.CheckedChanged += new System.EventHandler(this.RBtn_PSetting_Background_CheckedChanged);
             // 
             // pic_PSetting_Background
             // 
@@ -872,6 +875,7 @@
             this.pic_PSetting_Background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_PSetting_Background.TabIndex = 1;
             this.pic_PSetting_Background.TabStop = false;
+            this.pic_PSetting_Background.Click += new System.EventHandler(this.Pic_PSetting_Background_Click);
             // 
             // pic_PSetting_Background2
             // 
@@ -883,6 +887,7 @@
             this.pic_PSetting_Background2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_PSetting_Background2.TabIndex = 1;
             this.pic_PSetting_Background2.TabStop = false;
+            this.pic_PSetting_Background2.Click += new System.EventHandler(this.Pic_PSetting_Background2_Click);
             // 
             // rBtn_PSetting_Background4
             // 
@@ -892,6 +897,7 @@
             this.rBtn_PSetting_Background4.Size = new System.Drawing.Size(14, 13);
             this.rBtn_PSetting_Background4.TabIndex = 6;
             this.rBtn_PSetting_Background4.UseVisualStyleBackColor = true;
+            this.rBtn_PSetting_Background4.CheckedChanged += new System.EventHandler(this.RBtn_PSetting_Background4_CheckedChanged);
             // 
             // pic_PSetting_Background3
             // 
@@ -903,6 +909,7 @@
             this.pic_PSetting_Background3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_PSetting_Background3.TabIndex = 1;
             this.pic_PSetting_Background3.TabStop = false;
+            this.pic_PSetting_Background3.Click += new System.EventHandler(this.Pic_PSetting_Background3_Click);
             // 
             // rBtn_PSetting_Background5
             // 
@@ -912,6 +919,7 @@
             this.rBtn_PSetting_Background5.Size = new System.Drawing.Size(14, 13);
             this.rBtn_PSetting_Background5.TabIndex = 5;
             this.rBtn_PSetting_Background5.UseVisualStyleBackColor = true;
+            this.rBtn_PSetting_Background5.CheckedChanged += new System.EventHandler(this.RBtn_PSetting_Background5_CheckedChanged);
             // 
             // pic_PSetting_Background4
             // 
@@ -923,6 +931,7 @@
             this.pic_PSetting_Background4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_PSetting_Background4.TabIndex = 1;
             this.pic_PSetting_Background4.TabStop = false;
+            this.pic_PSetting_Background4.Click += new System.EventHandler(this.Pic_PSetting_Background4_Click);
             // 
             // rBtn_PSetting_Background3
             // 
@@ -932,6 +941,7 @@
             this.rBtn_PSetting_Background3.Size = new System.Drawing.Size(14, 13);
             this.rBtn_PSetting_Background3.TabIndex = 4;
             this.rBtn_PSetting_Background3.UseVisualStyleBackColor = true;
+            this.rBtn_PSetting_Background3.CheckedChanged += new System.EventHandler(this.RBtn_PSetting_Background3_CheckedChanged);
             // 
             // label23
             // 
