@@ -115,6 +115,15 @@
             this.panel_Help = new System.Windows.Forms.Panel();
             this.btn_PHelp_About = new System.Windows.Forms.PictureBox();
             this.btn_PHelp_Help = new System.Windows.Forms.PictureBox();
+            this.panel_Change_Password = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txt_ChPass_NPassword = new System.Windows.Forms.TextBox();
+            this.txt_ChPass_Password = new System.Windows.Forms.TextBox();
+            this.btn_ChPass_Cancel = new System.Windows.Forms.Button();
+            this.btn_ChPass_Ok = new System.Windows.Forms.Button();
+            this.txt_ChPass_CPassword = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Icon)).BeginInit();
             this.panel_Left.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PLeft_Login)).BeginInit();
@@ -156,6 +165,7 @@
             this.panel_Help.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PHelp_About)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PHelp_Help)).BeginInit();
+            this.panel_Change_Password.SuspendLayout();
             this.SuspendLayout();
             // 
             // pic_Icon
@@ -1024,6 +1034,7 @@
             this.btn_PSetting_EditPassWord.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_PSetting_EditPassWord.TabIndex = 1;
             this.btn_PSetting_EditPassWord.TabStop = false;
+            this.btn_PSetting_EditPassWord.Click += new System.EventHandler(this.Btn_PSetting_EditPassWord_Click);
             // 
             // panel_Help
             // 
@@ -1057,6 +1068,93 @@
             this.btn_PHelp_Help.TabIndex = 1;
             this.btn_PHelp_Help.TabStop = false;
             // 
+            // panel_Change_Password
+            // 
+            this.panel_Change_Password.BackColor = System.Drawing.Color.Transparent;
+            this.panel_Change_Password.Controls.Add(this.label25);
+            this.panel_Change_Password.Controls.Add(this.label19);
+            this.panel_Change_Password.Controls.Add(this.label24);
+            this.panel_Change_Password.Controls.Add(this.txt_ChPass_CPassword);
+            this.panel_Change_Password.Controls.Add(this.txt_ChPass_NPassword);
+            this.panel_Change_Password.Controls.Add(this.txt_ChPass_Password);
+            this.panel_Change_Password.Controls.Add(this.btn_ChPass_Cancel);
+            this.panel_Change_Password.Controls.Add(this.btn_ChPass_Ok);
+            this.panel_Change_Password.Location = new System.Drawing.Point(72, 397);
+            this.panel_Change_Password.Name = "panel_Change_Password";
+            this.panel_Change_Password.Size = new System.Drawing.Size(240, 167);
+            this.panel_Change_Password.TabIndex = 9;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(74, 176);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(190, 38);
+            this.label19.TabIndex = 8;
+            this.label19.Text = "NewPassword";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(127, 124);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(137, 38);
+            this.label24.TabIndex = 7;
+            this.label24.Text = "PassWord";
+            // 
+            // txt_ChPass_NPassword
+            // 
+            this.txt_ChPass_NPassword.Location = new System.Drawing.Point(278, 173);
+            this.txt_ChPass_NPassword.Name = "txt_ChPass_NPassword";
+            this.txt_ChPass_NPassword.PasswordChar = '*';
+            this.txt_ChPass_NPassword.Size = new System.Drawing.Size(349, 46);
+            this.txt_ChPass_NPassword.TabIndex = 6;
+            // 
+            // txt_ChPass_Password
+            // 
+            this.txt_ChPass_Password.Location = new System.Drawing.Point(278, 121);
+            this.txt_ChPass_Password.Name = "txt_ChPass_Password";
+            this.txt_ChPass_Password.Size = new System.Drawing.Size(349, 46);
+            this.txt_ChPass_Password.TabIndex = 5;
+            // 
+            // btn_ChPass_Cancel
+            // 
+            this.btn_ChPass_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_ChPass_Cancel.Location = new System.Drawing.Point(351, 298);
+            this.btn_ChPass_Cancel.Name = "btn_ChPass_Cancel";
+            this.btn_ChPass_Cancel.Size = new System.Drawing.Size(137, 46);
+            this.btn_ChPass_Cancel.TabIndex = 3;
+            this.btn_ChPass_Cancel.Text = "Cancel";
+            this.btn_ChPass_Cancel.UseVisualStyleBackColor = true;
+            this.btn_ChPass_Cancel.Click += new System.EventHandler(this.Btn_ChPass_Cancel_Click);
+            // 
+            // btn_ChPass_Ok
+            // 
+            this.btn_ChPass_Ok.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_ChPass_Ok.Location = new System.Drawing.Point(208, 298);
+            this.btn_ChPass_Ok.Name = "btn_ChPass_Ok";
+            this.btn_ChPass_Ok.Size = new System.Drawing.Size(137, 46);
+            this.btn_ChPass_Ok.TabIndex = 1;
+            this.btn_ChPass_Ok.Text = "Ok";
+            this.btn_ChPass_Ok.UseVisualStyleBackColor = true;
+            // 
+            // txt_ChPass_CPassword
+            // 
+            this.txt_ChPass_CPassword.Location = new System.Drawing.Point(278, 225);
+            this.txt_ChPass_CPassword.Name = "txt_ChPass_CPassword";
+            this.txt_ChPass_CPassword.PasswordChar = '*';
+            this.txt_ChPass_CPassword.Size = new System.Drawing.Size(349, 46);
+            this.txt_ChPass_CPassword.TabIndex = 6;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(127, 228);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(125, 38);
+            this.label25.TabIndex = 8;
+            this.label25.Text = "Confirm";
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 38F);
@@ -1064,6 +1162,7 @@
             this.BackgroundImage = global::manpass.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(850, 576);
+            this.Controls.Add(this.panel_Change_Password);
             this.Controls.Add(this.panel_Setting);
             this.Controls.Add(this.panel_SignUp);
             this.Controls.Add(this.panel_Help);
@@ -1127,6 +1226,8 @@
             this.panel_Help.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_PHelp_About)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PHelp_Help)).EndInit();
+            this.panel_Change_Password.ResumeLayout(false);
+            this.panel_Change_Password.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1219,6 +1320,15 @@
         private System.Windows.Forms.PictureBox btn_PHelp_Help;
         private System.Windows.Forms.GroupBox groupBox_PSetting_Background;
         private System.Windows.Forms.PictureBox btn_PSign_back;
+        private System.Windows.Forms.Panel panel_Change_Password;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox txt_ChPass_CPassword;
+        private System.Windows.Forms.TextBox txt_ChPass_NPassword;
+        private System.Windows.Forms.TextBox txt_ChPass_Password;
+        private System.Windows.Forms.Button btn_ChPass_Cancel;
+        private System.Windows.Forms.Button btn_ChPass_Ok;
     }
 }
 

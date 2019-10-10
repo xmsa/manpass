@@ -218,7 +218,7 @@ namespace manpass
         {
 
             m_dbConnection.Open();
-            string str = dictostr_in(dict);
+            string str = dictostr(dict, "=");
             string str2 = "User";
 
             if ("tb_password" == tbl)
