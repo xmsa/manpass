@@ -638,9 +638,9 @@
             this.panel_SignUp.Controls.Add(this.txt_PSign_Username);
             this.panel_SignUp.Controls.Add(this.txt_PSign_Phone_Number);
             this.panel_SignUp.Controls.Add(this.txt_PSign_LastName);
-            this.panel_SignUp.Location = new System.Drawing.Point(560, 230);
+            this.panel_SignUp.Location = new System.Drawing.Point(562, 229);
             this.panel_SignUp.Name = "panel_SignUp";
-            this.panel_SignUp.Size = new System.Drawing.Size(240, 159);
+            this.panel_SignUp.Size = new System.Drawing.Size(240, 160);
             this.panel_SignUp.TabIndex = 13;
             // 
             // btn_PSign_back
@@ -748,21 +748,22 @@
             this.txt_PSign_PassWord.Name = "txt_PSign_PassWord";
             this.txt_PSign_PassWord.PasswordChar = '*';
             this.txt_PSign_PassWord.Size = new System.Drawing.Size(425, 46);
-            this.txt_PSign_PassWord.TabIndex = 6;
+            this.txt_PSign_PassWord.TabIndex = 2;
             // 
             // txt_PSign_CPassWord
             // 
             this.txt_PSign_CPassWord.Location = new System.Drawing.Point(261, 110);
             this.txt_PSign_CPassWord.Name = "txt_PSign_CPassWord";
+            this.txt_PSign_CPassWord.PasswordChar = '*';
             this.txt_PSign_CPassWord.Size = new System.Drawing.Size(425, 46);
-            this.txt_PSign_CPassWord.TabIndex = 5;
+            this.txt_PSign_CPassWord.TabIndex = 3;
             // 
             // txt_PSign_Email
             // 
             this.txt_PSign_Email.Location = new System.Drawing.Point(261, 269);
             this.txt_PSign_Email.Name = "txt_PSign_Email";
             this.txt_PSign_Email.Size = new System.Drawing.Size(425, 46);
-            this.txt_PSign_Email.TabIndex = 4;
+            this.txt_PSign_Email.TabIndex = 6;
             // 
             // txt_PSign_FirstName
             // 
@@ -776,21 +777,21 @@
             this.txt_PSign_Username.Location = new System.Drawing.Point(261, 6);
             this.txt_PSign_Username.Name = "txt_PSign_Username";
             this.txt_PSign_Username.Size = new System.Drawing.Size(425, 46);
-            this.txt_PSign_Username.TabIndex = 3;
+            this.txt_PSign_Username.TabIndex = 1;
             // 
             // txt_PSign_Phone_Number
             // 
             this.txt_PSign_Phone_Number.Location = new System.Drawing.Point(261, 321);
             this.txt_PSign_Phone_Number.Name = "txt_PSign_Phone_Number";
             this.txt_PSign_Phone_Number.Size = new System.Drawing.Size(425, 46);
-            this.txt_PSign_Phone_Number.TabIndex = 2;
+            this.txt_PSign_Phone_Number.TabIndex = 7;
             // 
             // txt_PSign_LastName
             // 
             this.txt_PSign_LastName.Location = new System.Drawing.Point(261, 214);
             this.txt_PSign_LastName.Name = "txt_PSign_LastName";
             this.txt_PSign_LastName.Size = new System.Drawing.Size(425, 46);
-            this.txt_PSign_LastName.TabIndex = 2;
+            this.txt_PSign_LastName.TabIndex = 5;
             // 
             // panel_Setting
             // 
