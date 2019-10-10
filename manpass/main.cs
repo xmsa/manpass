@@ -260,14 +260,7 @@ namespace manpass
 
         private void Btn_PLog_Show_Click(object sender, EventArgs e)
         {
-            if (txt_PLog_PassWord.PasswordChar == '*')
-            {
-                txt_PLog_PassWord.PasswordChar = '\0';
-            }
-            else
-            {
-                txt_PLog_PassWord.PasswordChar = '*';
-            }
+            show(txt_PLog_PassWord);
         }
 
         private void Btn_PLog_Login_Click(object sender, EventArgs e)
@@ -469,5 +462,35 @@ namespace manpass
             btn_PLeft_Manager.Visible = true;
             btn_PLeft_Setting.Visible = true;
         }
+
+        private void Btn_PChPass_ShowPass_Click(object sender, EventArgs e)
+        {
+            show(txt_PChPass_Password);
+
+        }
+
+        private void Btn_PChPass_ShowNPass_Click(object sender, EventArgs e)
+        {
+            show(txt_PChPass_NPassword);
+        }
+
+        private void Btn_PChPass_ShowCPass_Click(object sender, EventArgs e)
+        {
+            show(txt_PChPass_CPassword);
+        }
+
+        private void Btn_PChPass_Ok_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void show(TextBox txt)
+        {
+            if (txt.PasswordChar == '*')
+                txt.PasswordChar = '\0';
+            else
+                txt.PasswordChar = '*';
+        }
+        
     }
 }
