@@ -301,6 +301,7 @@
             this.btn_PLog_Show.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_PLog_Show.TabIndex = 1;
             this.btn_PLog_Show.TabStop = false;
+            this.btn_PLog_Show.Click += new System.EventHandler(this.Btn_PLog_Show_Click);
             // 
             // btn_PLog_SignUp
             // 

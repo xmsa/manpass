@@ -242,5 +242,17 @@ namespace manpass
         {
             return txtbox.Text == string.Empty;
         }
+
+        private void Btn_PLog_Show_Click(object sender, EventArgs e)
+        {
+            if (txt_PLog_PassWord.PasswordChar=='*')
+            {
+                txt_PLog_PassWord.PasswordChar = '\0';
+            }
+            else
+            {
+                txt_PLog_PassWord.PasswordChar = '*';
+            }
+        }
     }
 }
