@@ -138,5 +138,17 @@ namespace manpass
             panel_Setting.Visible = false;
             panel_SignUp.Visible = false;
         }
+
+        private void Btn_PSign_clear_Click(object sender, EventArgs e)
+        {
+            txt_PSign_CPassWord.Text = string.Empty;
+            txt_PSign_Email.Text = string.Empty;
+            txt_PSign_FirstName.Text = string.Empty;
+            txt_PSign_LastName.Text = string.Empty;
+            txt_PSign_PassWord.Text = string.Empty;
+            txt_PSign_Phone_Number.Text = string.Empty;
+            txt_PSign_Username.Text = string.Empty;
+
+        }
     }
 }

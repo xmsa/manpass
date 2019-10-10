@@ -665,6 +665,7 @@
             this.btn_PSign_clear.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_PSign_clear.TabIndex = 1;
             this.btn_PSign_clear.TabStop = false;
+            this.btn_PSign_clear.Click += new System.EventHandler(this.Btn_PSign_clear_Click);
             // 
             // btn_PSign_Add
             // 
