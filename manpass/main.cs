@@ -28,6 +28,8 @@ namespace manpass
             panel_Setting.Location = new Point(71, 64);
             panel_SignUp.Location = new Point(71, 64);
             panel_Change_Password.Location = new Point(71, 64);
+            panel_About.Location = new Point(71, 64);
+
             //set size
             panel_Add_Edit_View.Size = new Size(715, 453);
             panel_Help.Size = new Size(715, 453);
@@ -36,7 +38,7 @@ namespace manpass
             panel_Setting.Size = new Size(715, 453);
             panel_SignUp.Size = new Size(715, 453);
             panel_Change_Password.Size = new Size(715, 453);
-
+            panel_About.Size = new Size(715, 453);
             btn_PLog_ForGetPassWord.Enabled = false;
 
         }
@@ -52,6 +54,8 @@ namespace manpass
             panel_Setting.Visible = false;
             panel_SignUp.Visible = false;
             panel_Change_Password.Visible = false;
+            panel_About.Visible = false;
+
         }
 
         public static bool openfile(ref string path, string Filter)
@@ -89,6 +93,7 @@ namespace manpass
             panel_Setting.Visible = false;
             panel_SignUp.Visible = false;
             panel_Change_Password.Visible = false;
+            panel_About.Visible = false;
 
 
 
@@ -103,6 +108,7 @@ namespace manpass
             panel_Setting.Visible = true;
             panel_SignUp.Visible = false;
             panel_Change_Password.Visible = false;
+            panel_About.Visible = false;
 
         }
 
@@ -115,6 +121,8 @@ namespace manpass
             panel_Setting.Visible = false;
             panel_SignUp.Visible = false;
             panel_Change_Password.Visible = false;
+            panel_About.Visible = false;
+
         }
 
         private void Btn_PLeft_Manager_Click(object sender, EventArgs e)
@@ -126,6 +134,7 @@ namespace manpass
             panel_Setting.Visible = false;
             panel_SignUp.Visible = false;
             panel_Change_Password.Visible = false;
+            panel_About.Visible = false;
 
         }
 
@@ -139,6 +148,8 @@ namespace manpass
             panel_SignUp.Visible = true;
             panel_Change_Password.Visible = false;
 
+            panel_About.Visible = false;
+
         }
 
         private void Btn_PSign_back_Click(object sender, EventArgs e)
@@ -150,6 +161,8 @@ namespace manpass
             panel_Setting.Visible = false;
             panel_SignUp.Visible = false;
             panel_Change_Password.Visible = false;
+
+            panel_About.Visible = false;
 
         }
 
@@ -238,6 +251,7 @@ namespace manpass
                         panel_Login.Visible = false;
                         panel_SignUp.Visible = false;
                         panel_Change_Password.Visible = false;
+                        panel_About.Visible = false;
 
                         return;
                     }
@@ -299,6 +313,8 @@ namespace manpass
                     panel_Login.Visible = false;
                     panel_SignUp.Visible = false;
                     panel_Change_Password.Visible = false;
+
+                    panel_About.Visible = false;
 
                     return;
                 }
@@ -415,6 +431,7 @@ namespace manpass
                 panel_Setting.Visible = false;
                 panel_SignUp.Visible = false;
                 panel_Change_Password.Visible = false;
+                panel_About.Visible = false;
 
 
                 txt_PLog_UserName.Text = string.Empty;
@@ -443,6 +460,8 @@ namespace manpass
             panel_Manager.Visible = false;
             panel_Setting.Visible = false;
             panel_SignUp.Visible = false;
+            panel_About.Visible = false;
+
             btn_PLeft_Exit.Visible = false;
             btn_PLeft_Help.Visible = false;
             btn_PLeft_Login.Visible = false;
@@ -451,6 +470,7 @@ namespace manpass
             txt_PChPass_CPassword.Clear();
             txt_PChPass_NPassword.Clear();
             txt_PChPass_Password.Clear();
+            
 
         }
 
@@ -458,12 +478,14 @@ namespace manpass
         {
             panel_Change_Password.Visible = false;
             panel_Setting.Visible = true;
-            panel_Change_Password.Visible = false;
+            panel_About.Visible = false;
+
             btn_PLeft_Exit.Visible = true;
             btn_PLeft_Help.Visible = true;
             btn_PLeft_Login.Visible = false;
             btn_PLeft_Manager.Visible = true;
             btn_PLeft_Setting.Visible = true;
+
         }
 
         private void Btn_PChPass_ShowPass_Click(object sender, EventArgs e)
@@ -530,12 +552,13 @@ namespace manpass
                 DB.update("tb_user", user, dict);
                 panel_Change_Password.Visible = false;
                 panel_Setting.Visible = true;
-                panel_Change_Password.Visible = false;
                 btn_PLeft_Exit.Visible = true;
                 btn_PLeft_Help.Visible = true;
                 btn_PLeft_Login.Visible = false;
                 btn_PLeft_Manager.Visible = true;
                 btn_PLeft_Setting.Visible = true;
+                panel_About.Visible = false;
+
                 return;
             }
             else
@@ -552,5 +575,40 @@ namespace manpass
                 txt.PasswordChar = '*';
         }
 
+        private void Btn_PHelp_About_Click(object sender, EventArgs e)
+        {
+            panel_About.Visible = true;
+
+            panel_Add_Edit_View.Visible = false;
+            panel_Help.Visible = false;
+            panel_Login.Visible = false;
+            panel_Manager.Visible = false;
+            panel_Setting.Visible = false;
+            panel_SignUp.Visible = false;
+            panel_Change_Password.Visible = false;
+        }
+
+        private void LinkLabel_PAbout_Instagram_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://instagram.com/xmzhry/");
+
+        }
+
+        private void LinkLabel_PAbout_Mail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("mailto:msaxmsa@gmail.com");
+
+        }
+
+        private void LinkLabel_PAbout_Github_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/xmsa");
+
+        }
+
+        private void LinkLabel_PAbout_telegtam_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://t.me/Xmzhry"); 
+        }
     }
 }

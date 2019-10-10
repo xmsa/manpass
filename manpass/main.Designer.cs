@@ -127,6 +127,17 @@
             this.txt_PChPass_Password = new System.Windows.Forms.TextBox();
             this.btn_PChPass_Cancel = new System.Windows.Forms.Button();
             this.btn_PChPass_Ok = new System.Windows.Forms.Button();
+            this.panel_About = new System.Windows.Forms.Panel();
+            this.LinkLabel_PAbout_telegtam = new System.Windows.Forms.LinkLabel();
+            this.LinkLabel_PAbout_Mail = new System.Windows.Forms.LinkLabel();
+            this.LinkLabel_PAbout_Github = new System.Windows.Forms.LinkLabel();
+            this.linkLabel_PAbout_Instagram = new System.Windows.Forms.LinkLabel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Icon)).BeginInit();
             this.panel_Left.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PLeft_Login)).BeginInit();
@@ -172,6 +183,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_PChPass_ShowCPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PChPass_ShowPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PChPass_ShowNPass)).BeginInit();
+            this.panel_About.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pic_Icon
@@ -1062,6 +1075,7 @@
             this.btn_PHelp_About.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_PHelp_About.TabIndex = 1;
             this.btn_PHelp_About.TabStop = false;
+            this.btn_PHelp_About.Click += new System.EventHandler(this.Btn_PHelp_About_Click);
             // 
             // btn_PHelp_Help
             // 
@@ -1202,6 +1216,133 @@
             this.btn_PChPass_Ok.UseVisualStyleBackColor = true;
             this.btn_PChPass_Ok.Click += new System.EventHandler(this.Btn_PChPass_Ok_Click);
             // 
+            // panel_About
+            // 
+            this.panel_About.BackColor = System.Drawing.Color.Transparent;
+            this.panel_About.Controls.Add(this.LinkLabel_PAbout_telegtam);
+            this.panel_About.Controls.Add(this.LinkLabel_PAbout_Mail);
+            this.panel_About.Controls.Add(this.LinkLabel_PAbout_Github);
+            this.panel_About.Controls.Add(this.linkLabel_PAbout_Instagram);
+            this.panel_About.Controls.Add(this.pictureBox2);
+            this.panel_About.Controls.Add(this.label26);
+            this.panel_About.Controls.Add(this.label27);
+            this.panel_About.Controls.Add(this.label30);
+            this.panel_About.Controls.Add(this.label29);
+            this.panel_About.Controls.Add(this.label28);
+            this.panel_About.Location = new System.Drawing.Point(96, 36);
+            this.panel_About.Name = "panel_About";
+            this.panel_About.Size = new System.Drawing.Size(721, 462);
+            this.panel_About.TabIndex = 10;
+            // 
+            // LinkLabel_PAbout_telegtam
+            // 
+            this.LinkLabel_PAbout_telegtam.AutoSize = true;
+            this.LinkLabel_PAbout_telegtam.Font = new System.Drawing.Font("Segoe Script", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkLabel_PAbout_telegtam.Location = new System.Drawing.Point(461, 362);
+            this.LinkLabel_PAbout_telegtam.Name = "LinkLabel_PAbout_telegtam";
+            this.LinkLabel_PAbout_telegtam.Size = new System.Drawing.Size(151, 30);
+            this.LinkLabel_PAbout_telegtam.TabIndex = 13;
+            this.LinkLabel_PAbout_telegtam.TabStop = true;
+            this.LinkLabel_PAbout_telegtam.Text = "t.me/Xmzhry";
+            this.LinkLabel_PAbout_telegtam.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_PAbout_telegtam_LinkClicked);
+            // 
+            // LinkLabel_PAbout_Mail
+            // 
+            this.LinkLabel_PAbout_Mail.AutoSize = true;
+            this.LinkLabel_PAbout_Mail.Font = new System.Drawing.Font("Segoe Script", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkLabel_PAbout_Mail.Location = new System.Drawing.Point(414, 387);
+            this.LinkLabel_PAbout_Mail.Name = "LinkLabel_PAbout_Mail";
+            this.LinkLabel_PAbout_Mail.Size = new System.Drawing.Size(245, 30);
+            this.LinkLabel_PAbout_Mail.TabIndex = 12;
+            this.LinkLabel_PAbout_Mail.TabStop = true;
+            this.LinkLabel_PAbout_Mail.Text = "MSAxMSA@gmail.com";
+            this.LinkLabel_PAbout_Mail.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_PAbout_Mail_LinkClicked);
+            // 
+            // LinkLabel_PAbout_Github
+            // 
+            this.LinkLabel_PAbout_Github.AutoSize = true;
+            this.LinkLabel_PAbout_Github.Font = new System.Drawing.Font("Segoe Script", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkLabel_PAbout_Github.Location = new System.Drawing.Point(425, 413);
+            this.LinkLabel_PAbout_Github.Name = "LinkLabel_PAbout_Github";
+            this.LinkLabel_PAbout_Github.Size = new System.Drawing.Size(189, 30);
+            this.LinkLabel_PAbout_Github.TabIndex = 11;
+            this.LinkLabel_PAbout_Github.TabStop = true;
+            this.LinkLabel_PAbout_Github.Text = "github.com/xmsa";
+            this.LinkLabel_PAbout_Github.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_PAbout_Github_LinkClicked);
+            // 
+            // linkLabel_PAbout_Instagram
+            // 
+            this.linkLabel_PAbout_Instagram.AutoSize = true;
+            this.linkLabel_PAbout_Instagram.Font = new System.Drawing.Font("Segoe Script", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel_PAbout_Instagram.Location = new System.Drawing.Point(391, 312);
+            this.linkLabel_PAbout_Instagram.Name = "linkLabel_PAbout_Instagram";
+            this.linkLabel_PAbout_Instagram.Size = new System.Drawing.Size(267, 30);
+            this.linkLabel_PAbout_Instagram.TabIndex = 10;
+            this.linkLabel_PAbout_Instagram.TabStop = true;
+            this.linkLabel_PAbout_Instagram.Text = "instagram.com/xmzhry/";
+            this.linkLabel_PAbout_Instagram.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_PAbout_Instagram_LinkClicked);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::manpass.Properties.Resources.mypic;
+            this.pictureBox2.Location = new System.Drawing.Point(198, 11);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(301, 298);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Segoe Script", 14.25F);
+            this.label26.Location = new System.Drawing.Point(23, 312);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(242, 30);
+            this.label26.TabIndex = 8;
+            this.label26.Text = "Mohammad Mazaheri ";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Segoe Script", 14.25F);
+            this.label27.Location = new System.Drawing.Point(23, 337);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(319, 30);
+            this.label27.TabIndex = 8;
+            this.label27.Text = "Bachelor of Computer Science";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Segoe Script", 14.25F);
+            this.label30.Location = new System.Drawing.Point(14, 413);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(338, 30);
+            this.label30.TabIndex = 7;
+            this.label30.Text = " Python C C++ C# Java  Matlab";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Segoe Script", 14.25F);
+            this.label29.Location = new System.Drawing.Point(18, 387);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(336, 30);
+            this.label29.TabIndex = 7;
+            this.label29.Text = "PhotoShop AfterEffect Premiere";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Segoe Script", 14.25F);
+            this.label28.Location = new System.Drawing.Point(21, 362);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(385, 30);
+            this.label28.TabIndex = 7;
+            this.label28.Text = "Editor🎬،Designer✏،programmer🔟 ";
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 38F);
@@ -1209,6 +1350,7 @@
             this.BackgroundImage = global::manpass.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(850, 576);
+            this.Controls.Add(this.panel_About);
             this.Controls.Add(this.panel_Change_Password);
             this.Controls.Add(this.panel_Setting);
             this.Controls.Add(this.panel_SignUp);
@@ -1278,6 +1420,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_PChPass_ShowCPass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PChPass_ShowPass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PChPass_ShowNPass)).EndInit();
+            this.panel_About.ResumeLayout(false);
+            this.panel_About.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1382,6 +1527,17 @@
         private System.Windows.Forms.PictureBox btn_PChPass_ShowCPass;
         private System.Windows.Forms.PictureBox btn_PChPass_ShowPass;
         private System.Windows.Forms.PictureBox btn_PChPass_ShowNPass;
+        private System.Windows.Forms.Panel panel_About;
+        private System.Windows.Forms.LinkLabel LinkLabel_PAbout_telegtam;
+        private System.Windows.Forms.LinkLabel LinkLabel_PAbout_Mail;
+        private System.Windows.Forms.LinkLabel LinkLabel_PAbout_Github;
+        private System.Windows.Forms.LinkLabel linkLabel_PAbout_Instagram;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
     }
 }
 
