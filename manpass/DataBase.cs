@@ -61,7 +61,7 @@ namespace manpass
                         {
                             continue;
                         }
-                        System.IO.File.Copy(path, Application.StartupPath.ToString() + @"\DataBase.sqlite",true);
+                        System.IO.File.Copy(path, Application.StartupPath.ToString() + @"\DataBase.sqlite", true);
 
                     }
                     else if (message == DialogResult.Cancel)
@@ -75,7 +75,7 @@ namespace manpass
             }
             m_dbConnection = ConnectionDB("DataBase");
         }
-        ~ DataBase()
+        ~DataBase()
         {
 
         }
@@ -122,23 +122,23 @@ namespace manpass
         {
             string Primary_Key = "User";
 
-            if (tbl== "tb_password")
+            if (tbl == "tb_password")
             {
                 Primary_Key = "Id";
             }
             List<string> lst = new List<string>();
-            Dictionary<string,string> dict2 = new Dictionary<string, string>();
+            Dictionary<string, string> dict2 = new Dictionary<string, string>();
             dict2.Add(Primary_Key, dict[Primary_Key]);
 
-            int rows=search(tbl,  dict2 , lst).Rows.Count;
-            if (rows==0)
+            int rows = search(tbl, dict2, lst).Rows.Count;
+            if (rows == 0)
             {
-            m_dbConnection.Open();
-            string str = dictostr_in(dict);
-            string sql = "insert into " + tbl + str;
-            SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
-            command.ExecuteNonQuery();
-            m_dbConnection.Close();
+                m_dbConnection.Open();
+                string str = dictostr_in(dict);
+                string sql = "insert into " + tbl + str;
+                SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
+                command.ExecuteNonQuery();
+                m_dbConnection.Close();
                 return true;
             }
             else
@@ -212,6 +212,22 @@ namespace manpass
                 str += item.Key + " = '" + item.Value + "' , ";
             }
             return str.Remove(str.Length - 2);
+        }
+
+        public void update(string tbl, string value, Dictionary<string, string> dict)
+        {
+
+            m_dbConnection.Open();
+            string str = dictostr_in(dict);
+            string str2 = "User";
+
+            if ("tb_password" == tbl)
+                str2 = "Id";
+
+            string sql = "UPDATE " + tbl + " SET " + str + " WHERE " + str2 + " = '" + value + "'";
+            SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
+            command.ExecuteNonQuery();
+            m_dbConnection.Close();
         }
     }
 }
