@@ -34,6 +34,7 @@ namespace manpass
             panel_Manager.Size = new Size(715, 453);
             panel_Setting.Size = new Size(715, 453);
             panel_SignUp.Size = new Size(715, 453);
+            btn_PLog_ForGetPassWord.Enabled = false;
 
         }
 
@@ -252,6 +253,55 @@ namespace manpass
             else
             {
                 txt_PLog_PassWord.PasswordChar = '*';
+            }
+        }
+
+        private void Btn_PLog_Login_Click(object sender, EventArgs e)
+        {
+
+            bool flag = false;
+            string error = string.Empty;
+            if (check_txt_Empty(txt_PLog_UserName))
+            {
+                error += "Username\n";
+                flag = true;
+            }
+            if (check_txt_Empty(txt_PLog_PassWord))
+            {
+                error += "PassWord\n";
+                flag = true;
+            }
+            if (flag)
+            {
+                MessageBox.Show(error + "fields are empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            List<string> lst = new List<string>();
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            dict.Add("User", txt_PLog_UserName.Text);
+            var rows = DB.search("tb_user", dict, lst).Rows;
+            if (rows.Count == 1)
+            {
+                if (rows[0][1].ToString() == txt_PLog_PassWord.Text)
+                {
+                    MessageBox.Show("Welcome " + txt_PLog_UserName.Text);
+                    user = txt_PLog_UserName.Text;
+                    btn_PLeft_Login.Visible = false;
+                    btn_PLeft_Manager.Visible = true;
+                    btn_PLeft_Setting.Visible = true;
+                    panel_Login.Visible = false;
+                    panel_SignUp.Visible = false;
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Wrong password. Try again or click Forgot password to reset it.");
+                    btn_PLog_ForGetPassWord.Enabled = true;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Couldn't find your UserName");
             }
         }
     }

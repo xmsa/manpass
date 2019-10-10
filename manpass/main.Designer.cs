@@ -333,6 +333,7 @@
             this.btn_PLog_Login.TabIndex = 1;
             this.btn_PLog_Login.Text = "Login";
             this.btn_PLog_Login.UseVisualStyleBackColor = true;
+            this.btn_PLog_Login.Click += new System.EventHandler(this.Btn_PLog_Login_Click);
             // 
             // panel_Manager
             // 
