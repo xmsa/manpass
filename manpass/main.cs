@@ -15,6 +15,7 @@ namespace manpass
     public partial class frm_Main : Form
     {
         DataBase DB;
+        string user;
         public frm_Main()
         {
             InitializeComponent();
@@ -153,28 +154,93 @@ namespace manpass
 
         private void Btn_PSign_Add_Click(object sender, EventArgs e)
         {
+            bool flag = false;
+            string error=string.Empty;
+            if (check_txt_Empty(txt_PSign_Username))
+            {
+                error += "Username\n";
+                flag = true;
+            }
+            if (check_txt_Empty(txt_PSign_PassWord))
+            {
+                error += "PassWord\n";
+                flag = true;
+            }
+            if (check_txt_Empty(txt_PSign_CPassWord))
+            {
+                error += "Confrim\n";
+                flag = true;
+            }
+            if (check_txt_Empty(txt_PSign_FirstName))
+            {
+                error += "FirstName\n";
+                flag = true;
+            }
+            if (check_txt_Empty(txt_PSign_LastName))
+            {
+                error += "FirstName\n";
+                flag = true;
+            }
+            if (check_txt_Empty(txt_PSign_Email))
+            {
+                error += "Email\n";
+                flag = true;
+            }
+            if (check_txt_Empty(txt_PSign_Phone_Number))
+            {
+                error += "Phone Number\n";
+                flag = true;
+            }
+            if (flag)
+            {
+                MessageBox.Show(error+ "fields are empty","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txt_PSign_PassWord.Text.Length<8)
+            {
+                MessageBox.Show("Use 8 characters or more for your password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            } 
             if (txt_PSign_CPassWord.Text== txt_PSign_PassWord.Text)
             {
-            Dictionary<string, string> dict_profile = new Dictionary<string, string>();
-
-                dict_profile.Add("User", txt_PSign_Username.Text );
-                dict_profile.Add("FirstName",txt_PSign_FirstName.Text);
-                dict_profile.Add("LastName", txt_PSign_LastName.Text);
-                dict_profile.Add("Email", txt_PSign_Email.Text);
-                dict_profile.Add("phoneNumber", txt_PSign_Phone_Number.Text);
-                DB.insert("tb_profile", dict_profile);
-
                 Dictionary<string, string> dict_user = new Dictionary<string, string>();
                 dict_user.Add("User", txt_PSign_Username.Text);
                 dict_user.Add("Password", txt_PSign_PassWord.Text);
 
-                DB.insert("tb_user", dict_user);
-
+                if (DB.insert("tb_user", dict_user))
+                {
+                    Dictionary<string, string> dict_profile = new Dictionary<string, string>();
+                    dict_profile.Add("User", txt_PSign_Username.Text );
+                    dict_profile.Add("FirstName",txt_PSign_FirstName.Text);
+                    dict_profile.Add("LastName", txt_PSign_LastName.Text);
+                    dict_profile.Add("Email", txt_PSign_Email.Text);
+                    dict_profile.Add("phoneNumber", txt_PSign_Phone_Number.Text);
+                    if (DB.insert("tb_profile", dict_profile))
+                    {
+                        MessageBox.Show("Welcome "+ txt_PSign_FirstName.Text);
+                        user = txt_PSign_Username.Text;
+                        btn_PLeft_Login.Visible=false;
+                        btn_PLeft_Manager.Visible=true;
+                        btn_PLeft_Setting.Visible = true;
+                        panel_Login.Visible=false;
+                        panel_SignUp.Visible = false;
+                        return;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Username is a duplicate", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
                 MessageBox.Show("Those passwords didn't match. Try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private bool check_txt_Empty(TextBox txtbox)
+        {
+            return txtbox.Text == string.Empty;
         }
     }
 }
