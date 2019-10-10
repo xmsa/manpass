@@ -113,7 +113,7 @@ namespace manpass
             return tostr;
         }
 
-        public void insert(string tbl, Dictionary<string, string> dict)
+        public bool insert(string tbl, Dictionary<string, string> dict)
         {
             string Primary_Key = "User";
 
@@ -134,16 +134,12 @@ namespace manpass
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
             command.ExecuteNonQuery();
             m_dbConnection.Close();
+                return true;
             }
             else
             {
-                MessageBox.Show("Test");
-                return;
+                return false;
             }
-
-            
-
-
         }
 
         private static string dictostr_in(Dictionary<string, string> dict)
