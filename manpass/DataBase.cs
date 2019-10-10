@@ -20,7 +20,7 @@ namespace manpass
             {
                 while (flag)
                 {
-                    var message = MessageBox.Show("Build a new DataBase \"Yes\" \nImport the DataBase \"No\"", "DataBase not found", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    var message = MessageBox.Show("Build a new DataBase \"Yes\" \nImport the DataBase \"No\"\nExit \"Cansel\"", "DataBase not found", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
                     if (message == DialogResult.Yes)
                     {
                         CreateFileDB("DataBase");
@@ -61,8 +61,13 @@ namespace manpass
                         {
                             continue;
                         }
-                        System.IO.File.Move(path, Application.StartupPath.ToString() + @"\DataBase.sqlite");
+                        System.IO.File.Copy(path, Application.StartupPath.ToString() + @"\DataBase.sqlite",true);
 
+                    }
+                    else if (message == DialogResult.Cancel)
+                    {
+                        Environment.Exit(0);
+                        return;
                     }
 
                 }

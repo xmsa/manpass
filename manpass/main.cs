@@ -42,13 +42,13 @@ namespace manpass
         {
             btn_PLeft_Manager.Visible = false;
             btn_PLeft_Setting.Visible = false;
-            panel_Add_Edit_View.Visible =false;
-            panel_Help.Visible =false;
-            panel_Login.Visible =true;
-            panel_Manager.Visible =false;
-            panel_Setting.Visible =false;
-            panel_SignUp.Visible =false;
-            
+            panel_Add_Edit_View.Visible = false;
+            panel_Help.Visible = false;
+            panel_Login.Visible = true;
+            panel_Manager.Visible = false;
+            panel_Setting.Visible = false;
+            panel_SignUp.Visible = false;
+
         }
 
         public static bool openfile(ref string path, string Filter)
@@ -65,10 +65,10 @@ namespace manpass
             {
                 path = openFileDialog.FileName;
                 return false;
-                   
+
             }
             path = string.Empty;
-            return true ;
+            return true;
         }
 
         private void Btn_PLeft_Exit_Click(object sender, EventArgs e)
@@ -156,7 +156,7 @@ namespace manpass
         private void Btn_PSign_Add_Click(object sender, EventArgs e)
         {
             bool flag = false;
-            string error=string.Empty;
+            string error = string.Empty;
             if (check_txt_Empty(txt_PSign_Username))
             {
                 error += "Username\n";
@@ -194,15 +194,15 @@ namespace manpass
             }
             if (flag)
             {
-                MessageBox.Show(error+ "fields are empty","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(error + "fields are empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (txt_PSign_PassWord.Text.Length<8)
+            if (txt_PSign_PassWord.Text.Length < 8)
             {
                 MessageBox.Show("Use 8 characters or more for your password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            } 
-            if (txt_PSign_CPassWord.Text== txt_PSign_PassWord.Text)
+            }
+            if (txt_PSign_CPassWord.Text == txt_PSign_PassWord.Text)
             {
                 Dictionary<string, string> dict_user = new Dictionary<string, string>();
                 dict_user.Add("User", txt_PSign_Username.Text);
@@ -211,19 +211,19 @@ namespace manpass
                 if (DB.insert("tb_user", dict_user))
                 {
                     Dictionary<string, string> dict_profile = new Dictionary<string, string>();
-                    dict_profile.Add("User", txt_PSign_Username.Text );
-                    dict_profile.Add("FirstName",txt_PSign_FirstName.Text);
+                    dict_profile.Add("User", txt_PSign_Username.Text);
+                    dict_profile.Add("FirstName", txt_PSign_FirstName.Text);
                     dict_profile.Add("LastName", txt_PSign_LastName.Text);
                     dict_profile.Add("Email", txt_PSign_Email.Text);
                     dict_profile.Add("phoneNumber", txt_PSign_Phone_Number.Text);
                     if (DB.insert("tb_profile", dict_profile))
                     {
-                        MessageBox.Show("Welcome "+ txt_PSign_FirstName.Text);
+                        MessageBox.Show("Welcome " + txt_PSign_FirstName.Text);
                         user = txt_PSign_Username.Text;
-                        btn_PLeft_Login.Visible=false;
-                        btn_PLeft_Manager.Visible=true;
+                        btn_PLeft_Login.Visible = false;
+                        btn_PLeft_Manager.Visible = true;
                         btn_PLeft_Setting.Visible = true;
-                        panel_Login.Visible=false;
+                        panel_Login.Visible = false;
                         panel_SignUp.Visible = false;
                         return;
                     }
@@ -246,7 +246,7 @@ namespace manpass
 
         private void Btn_PLog_Show_Click(object sender, EventArgs e)
         {
-            if (txt_PLog_PassWord.PasswordChar=='*')
+            if (txt_PLog_PassWord.PasswordChar == '*')
             {
                 txt_PLog_PassWord.PasswordChar = '\0';
             }
@@ -305,7 +305,7 @@ namespace manpass
             }
         }
 
-        
+
 
         private void Pic_PSetting_Background_Click(object sender, EventArgs e)
         {
@@ -359,6 +359,30 @@ namespace manpass
         private void RBtn_PSetting_Background5_CheckedChanged(object sender, EventArgs e)
         {
             this.BackgroundImage = Properties.Resources.background5;
+        }
+
+        private void Btn_PSetting_ExportDB_Click(object sender, EventArgs e)
+        {
+            string path = string.Empty;
+            if (fileSave(ref path, "DataBase | DataBase.sqlite", "DataBase.sqlite"))
+            {
+                File.Copy(Application.StartupPath + @"\DataBase.sqlite", path);
+
+            }
+
+        }
+        public static bool fileSave(ref string path, string Filter, string FileName)
+        {
+            SaveFileDialog save = new SaveFileDialog();
+            save.Filter = Filter;
+            save.FileName = FileName;
+            var result = save.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                path = save.FileName;
+                return true;
+            }
+            return false;
         }
     }
 }

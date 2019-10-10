@@ -809,7 +809,7 @@
             this.panel_Setting.Controls.Add(this.btn_PSetting_EditPassWord);
             this.panel_Setting.Location = new System.Drawing.Point(72, 229);
             this.panel_Setting.Name = "panel_Setting";
-            this.panel_Setting.Size = new System.Drawing.Size(648, 160);
+            this.panel_Setting.Size = new System.Drawing.Size(238, 161);
             this.panel_Setting.TabIndex = 14;
             // 
             // groupBox_PSetting_Background
@@ -1000,6 +1000,7 @@
             this.btn_PSetting_ExportDB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_PSetting_ExportDB.TabIndex = 1;
             this.btn_PSetting_ExportDB.TabStop = false;
+            this.btn_PSetting_ExportDB.Click += new System.EventHandler(this.Btn_PSetting_ExportDB_Click);
             // 
             // btn_PSetting_Edit_ProFile
             // 
