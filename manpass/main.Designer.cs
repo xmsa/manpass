@@ -75,7 +75,8 @@
             this.btn_PAEV_Edit = new System.Windows.Forms.PictureBox();
             this.btn_PAEV_Add = new System.Windows.Forms.PictureBox();
             this.panel_SignUp = new System.Windows.Forms.Panel();
-            this.btn_PSign_Back = new System.Windows.Forms.PictureBox();
+            this.btn_PSign_back = new System.Windows.Forms.PictureBox();
+            this.btn_PSign_clear = new System.Windows.Forms.PictureBox();
             this.btn_PSign_Add = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -138,7 +139,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_PAEV_Edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PAEV_Add)).BeginInit();
             this.panel_SignUp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PSign_Back)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PSign_back)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PSign_clear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PSign_Add)).BeginInit();
             this.panel_Setting.SuspendLayout();
             this.groupBox_PSetting_Background.SuspendLayout();
@@ -619,7 +621,8 @@
             // panel_SignUp
             // 
             this.panel_SignUp.BackColor = System.Drawing.Color.Transparent;
-            this.panel_SignUp.Controls.Add(this.btn_PSign_Back);
+            this.panel_SignUp.Controls.Add(this.btn_PSign_back);
+            this.panel_SignUp.Controls.Add(this.btn_PSign_clear);
             this.panel_SignUp.Controls.Add(this.btn_PSign_Add);
             this.panel_SignUp.Controls.Add(this.label12);
             this.panel_SignUp.Controls.Add(this.label13);
@@ -635,21 +638,32 @@
             this.panel_SignUp.Controls.Add(this.txt_PSign_Username);
             this.panel_SignUp.Controls.Add(this.txt_PSign_Phone_Number);
             this.panel_SignUp.Controls.Add(this.txt_PSign_LastName);
-            this.panel_SignUp.Location = new System.Drawing.Point(562, 232);
+            this.panel_SignUp.Location = new System.Drawing.Point(560, 230);
             this.panel_SignUp.Name = "panel_SignUp";
-            this.panel_SignUp.Size = new System.Drawing.Size(240, 160);
+            this.panel_SignUp.Size = new System.Drawing.Size(240, 159);
             this.panel_SignUp.TabIndex = 13;
             // 
-            // btn_PSign_Back
+            // btn_PSign_back
             // 
-            this.btn_PSign_Back.BackColor = System.Drawing.Color.Transparent;
-            this.btn_PSign_Back.Image = global::manpass.Properties.Resources.remove;
-            this.btn_PSign_Back.Location = new System.Drawing.Point(164, 391);
-            this.btn_PSign_Back.Name = "btn_PSign_Back";
-            this.btn_PSign_Back.Size = new System.Drawing.Size(62, 50);
-            this.btn_PSign_Back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_PSign_Back.TabIndex = 1;
-            this.btn_PSign_Back.TabStop = false;
+            this.btn_PSign_back.BackColor = System.Drawing.Color.Transparent;
+            this.btn_PSign_back.Image = global::manpass.Properties.Resources.Back;
+            this.btn_PSign_back.Location = new System.Drawing.Point(237, 392);
+            this.btn_PSign_back.Name = "btn_PSign_back";
+            this.btn_PSign_back.Size = new System.Drawing.Size(62, 50);
+            this.btn_PSign_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_PSign_back.TabIndex = 1;
+            this.btn_PSign_back.TabStop = false;
+            // 
+            // btn_PSign_clear
+            // 
+            this.btn_PSign_clear.BackColor = System.Drawing.Color.Transparent;
+            this.btn_PSign_clear.Image = global::manpass.Properties.Resources.remove;
+            this.btn_PSign_clear.Location = new System.Drawing.Point(164, 391);
+            this.btn_PSign_clear.Name = "btn_PSign_clear";
+            this.btn_PSign_clear.Size = new System.Drawing.Size(62, 50);
+            this.btn_PSign_clear.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_PSign_clear.TabIndex = 1;
+            this.btn_PSign_clear.TabStop = false;
             // 
             // btn_PSign_Add
             // 
@@ -1076,7 +1090,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_PAEV_Add)).EndInit();
             this.panel_SignUp.ResumeLayout(false);
             this.panel_SignUp.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_PSign_Back)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PSign_back)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PSign_clear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PSign_Add)).EndInit();
             this.panel_Setting.ResumeLayout(false);
             this.panel_Setting.PerformLayout();
@@ -1144,7 +1159,7 @@
         private System.Windows.Forms.PictureBox btn_PAEV_Edit;
         private System.Windows.Forms.PictureBox btn_PAEV_Add;
         private System.Windows.Forms.Panel panel_SignUp;
-        private System.Windows.Forms.PictureBox btn_PSign_Back;
+        private System.Windows.Forms.PictureBox btn_PSign_clear;
         private System.Windows.Forms.PictureBox btn_PSign_Add;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
@@ -1185,6 +1200,7 @@
         private System.Windows.Forms.PictureBox btn_PHelp_About;
         private System.Windows.Forms.PictureBox btn_PHelp_Help;
         private System.Windows.Forms.GroupBox groupBox_PSetting_Background;
+        private System.Windows.Forms.PictureBox btn_PSign_back;
     }
 }
 
