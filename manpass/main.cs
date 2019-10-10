@@ -150,5 +150,31 @@ namespace manpass
             txt_PSign_Username.Text = string.Empty;
 
         }
+
+        private void Btn_PSign_Add_Click(object sender, EventArgs e)
+        {
+            if (txt_PSign_CPassWord.Text== txt_PSign_PassWord.Text)
+            {
+            Dictionary<string, string> dict_profile = new Dictionary<string, string>();
+
+                dict_profile.Add("User", txt_PSign_Username.Text );
+                dict_profile.Add("FirstName",txt_PSign_FirstName.Text);
+                dict_profile.Add("LastName", txt_PSign_LastName.Text);
+                dict_profile.Add("Email", txt_PSign_Email.Text);
+                dict_profile.Add("phoneNumber", txt_PSign_Phone_Number.Text);
+                DB.insert("tb_profile", dict_profile);
+
+                Dictionary<string, string> dict_user = new Dictionary<string, string>();
+                dict_user.Add("User", txt_PSign_Username.Text);
+                dict_user.Add("Password", txt_PSign_PassWord.Text);
+
+                DB.insert("tb_user", dict_user);
+
+            }
+            else
+            {
+                MessageBox.Show("Those passwords didn't match. Try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

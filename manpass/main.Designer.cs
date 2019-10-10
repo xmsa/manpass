@@ -677,6 +677,7 @@
             this.btn_PSign_Add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_PSign_Add.TabIndex = 1;
             this.btn_PSign_Add.TabStop = false;
+            this.btn_PSign_Add.Click += new System.EventHandler(this.Btn_PSign_Add_Click);
             // 
             // label12
             // 
