@@ -642,6 +642,38 @@ namespace manpass
 
         private void Btn_PAEV_Random_Click(object sender, EventArgs e)
         {
+            var rnd = random("qwertyuiopasdfghjklzxcvbnm", (int)numericUpDown_PAEV_Down.Value);
+            rnd.AddRange(random("qwertyuiopasdfghjklzxcvbnm".ToUpper(), (int)numericUpDown_PAEV_Up.Value));
+            rnd.AddRange(random("1234567890".ToUpper(), (int)numericUpDown_PAEV_Number.Value));
+            rnd.AddRange(random("!@#$%".ToUpper(), (int)numericUpDown_PAEV_Symbol.Value));
+
+            txt_PAEV_PassWord.Text= random(rnd);
+        }
+
+        private string random(List<char> lst)
+        {
+            string str = string.Empty;
+            Random rnd = new Random();
+            while (lst.Count > 0)
+            {
+                int index = rnd.Next(lst.Count);
+                str += lst[index];
+
+                lst.RemoveAt(index);
+            }
+            return str;
+        }
+
+        private List<char> random(string str, int len)
+        {
+            List<char> lst = new List<char>();
+            Random rnd = new Random();
+            for (int i = 0; i < len; i++)
+            {
+                int index = rnd.Next(str.Length);
+                lst.Add(str[index]);
+            }
+            return lst;
 
         }
     }
