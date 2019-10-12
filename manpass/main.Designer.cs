@@ -427,6 +427,7 @@
             this.btn_PManager_Delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_PManager_Delete.TabIndex = 1;
             this.btn_PManager_Delete.TabStop = false;
+            this.btn_PManager_Delete.Click += new System.EventHandler(this.Btn_PManager_Delete_Click);
             // 
             // btn_PManager_Add
             // 

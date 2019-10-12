@@ -796,17 +796,20 @@ namespace manpass
 
         private void Btn_PManager_Edit_Click(object sender, EventArgs e)
         {
-            txt_PAEV_Description.Enabled = true;
-            txt_PAEV_PassWord.Enabled = true;
-            txt_PAEV_Site.Enabled = true;
-            txt_PAEV_Title.Enabled = true;
-            txt_PAEV_UserName.Enabled = true;
-            groupBox_PAEV_Random.Visible = true;
-            btn_PAEV_Random.Visible = true;
-            btn_PAEV_Add.Visible = false;
-            panel_Add_Edit_View.Visible = true;
-            panel_Manager.Visible = false;
-            btn_PAEV_Ok.Visible = true;
+            if (showvalue())
+            {
+                txt_PAEV_Description.Enabled = true;
+                txt_PAEV_PassWord.Enabled = true;
+                txt_PAEV_Site.Enabled = true;
+                txt_PAEV_Title.Enabled = true;
+                txt_PAEV_UserName.Enabled = true;
+                groupBox_PAEV_Random.Visible = true;
+                btn_PAEV_Random.Visible = true;
+                btn_PAEV_Add.Visible = false;
+                panel_Add_Edit_View.Visible = true;
+                panel_Manager.Visible = false;
+                btn_PAEV_Ok.Visible = true;
+            }
         }
 
         private void Btn_PAEV_Edit_Click(object sender, EventArgs e)
@@ -857,7 +860,28 @@ namespace manpass
 
         private void Btn_PAEV_Back_Click(object sender, EventArgs e)
         {
+            panel_Add_Edit_View.Visible = false;
+            panel_Manager.Visible = true;
+        }
 
+        private void Btn_PManager_Delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string str;
+                str = listBox_PManage_Title.SelectedItem.ToString();
+                str = str.Remove(0, 5);
+                Id = str.Remove(9, str.Length - 9);
+                DB.Delete("tb_password", Id);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("please select item from list", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Btn_PLeft_Manager_Click(sender, e);
+            }
         }
     }
 }

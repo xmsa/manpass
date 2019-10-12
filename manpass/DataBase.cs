@@ -229,6 +229,21 @@ namespace manpass
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
             command.ExecuteNonQuery();
             m_dbConnection.Close();
+            
+        }
+        public void Delete(string tbl, string value)
+        {
+
+            m_dbConnection.Open();
+            string str2 = "User";
+            if ("tb_password" == tbl)
+                str2 = "Id";
+
+            string sql = "DELETE FROM " + tbl + " WHERE "+str2+" = '"+value+"'";
+            SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
+            command.ExecuteNonQuery();
+            m_dbConnection.Close();
+            
         }
     }
 }
