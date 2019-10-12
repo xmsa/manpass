@@ -47,6 +47,7 @@ namespace manpass
                         tb_password.Add("Password", "TEXT NOT NULL");
                         tb_password.Add("Site", "TEXT");
                         tb_password.Add("Description", "TEXT");
+                        tb_password.Add("How", "TEXT NOT NULL");
 
                         create_tb(m_dbConnection, "tb_user", tb_user);
                         create_tb(m_dbConnection, "tb_profile", tb_profile);
