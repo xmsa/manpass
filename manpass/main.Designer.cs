@@ -649,6 +649,7 @@
             this.btn_PAEV_Add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_PAEV_Add.TabIndex = 1;
             this.btn_PAEV_Add.TabStop = false;
+            this.btn_PAEV_Add.Click += new System.EventHandler(this.Btn_PAEV_Add_Click);
             // 
             // panel_SignUp
             // 

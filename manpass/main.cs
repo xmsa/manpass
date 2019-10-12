@@ -676,5 +676,48 @@ namespace manpass
             return lst;
 
         }
+
+        private void Btn_PAEV_Add_Click(object sender, EventArgs e)
+        {
+            
+            bool flag = false;
+            string error = string.Empty;
+            if (check_txt_Empty(txt_PAEV_Title))
+            {
+                error += "Title\n";
+                flag = true;
+            }
+            if (check_txt_Empty(txt_PAEV_PassWord))
+            {
+                error += "PassWord\n";
+                flag = true;
+            }
+            if (flag)
+            {
+                MessageBox.Show(error + "fields are empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            Random rnd = new Random();
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            dict.Add("Id", rnd.Next(1000000, 999999999).ToString());
+            dict.Add("Title", txt_PAEV_Title.Text);
+            dict.Add("User",  txt_PAEV_UserName.Text);
+            dict.Add("Password", txt_PAEV_PassWord.Text);
+            dict.Add("Site", txt_PAEV_Site.Text);
+            dict.Add("Description", txt_PAEV_Description.Text);
+            dict.Add("Who", user);
+            while (!(DB.insert("tb_password", dict)))
+            {
+                dict["Id"] = rnd.Next(1000000, 999999999).ToString();
+            }
+            txt_PAEV_Title.Text=string.Empty;
+            txt_PAEV_UserName.Text = string.Empty;
+            txt_PAEV_PassWord.Text = string.Empty;
+            txt_PAEV_Site.Text = string.Empty;
+            txt_PAEV_Description.Text = string.Empty;
+            panel_Add_Edit_View.Visible = false;
+            panel_Manager.Visible = true;
+        }
     }
 }
