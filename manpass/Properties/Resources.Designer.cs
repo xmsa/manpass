@@ -243,6 +243,16 @@ namespace manpass.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ok {
+            get {
+                object obj = ResourceManager.GetObject("ok", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap panel_left {
             get {
                 object obj = ResourceManager.GetObject("panel left", resourceCulture);

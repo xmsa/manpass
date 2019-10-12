@@ -72,7 +72,9 @@
             this.txt_PAEV_Site = new System.Windows.Forms.TextBox();
             this.txt_PAEV_Title = new System.Windows.Forms.TextBox();
             this.txt_PAEV_Description = new System.Windows.Forms.TextBox();
+            this.btn_PAEV_Back = new System.Windows.Forms.PictureBox();
             this.btn_PAEV_Edit = new System.Windows.Forms.PictureBox();
+            this.btn_PAEV_Ok = new System.Windows.Forms.PictureBox();
             this.btn_PAEV_Add = new System.Windows.Forms.PictureBox();
             this.panel_SignUp = new System.Windows.Forms.Panel();
             this.btn_PSign_back = new System.Windows.Forms.PictureBox();
@@ -159,7 +161,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_PAEV_Symbol)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_PAEV_Number)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_PAEV_Down)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PAEV_Back)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PAEV_Edit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PAEV_Ok)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PAEV_Add)).BeginInit();
             this.panel_SignUp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PSign_back)).BeginInit();
@@ -376,7 +380,7 @@
             this.panel_Manager.Controls.Add(this.btn_PManager_Add);
             this.panel_Manager.Location = new System.Drawing.Point(72, 64);
             this.panel_Manager.Name = "panel_Manager";
-            this.panel_Manager.Size = new System.Drawing.Size(716, 442);
+            this.panel_Manager.Size = new System.Drawing.Size(240, 156);
             this.panel_Manager.TabIndex = 3;
             // 
             // listBox_PManage_Title
@@ -386,7 +390,7 @@
             this.listBox_PManage_Title.ItemHeight = 38;
             this.listBox_PManage_Title.Location = new System.Drawing.Point(0, 0);
             this.listBox_PManage_Title.Name = "listBox_PManage_Title";
-            this.listBox_PManage_Title.Size = new System.Drawing.Size(716, 346);
+            this.listBox_PManage_Title.Size = new System.Drawing.Size(240, 346);
             this.listBox_PManage_Title.TabIndex = 0;
             // 
             // btn_PManager_View
@@ -411,6 +415,7 @@
             this.btn_PManager_Edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_PManager_Edit.TabIndex = 1;
             this.btn_PManager_Edit.TabStop = false;
+            this.btn_PManager_Edit.Click += new System.EventHandler(this.Btn_PManager_Edit_Click);
             // 
             // btn_PManager_Delete
             // 
@@ -450,11 +455,13 @@
             this.panel_Add_Edit_View.Controls.Add(this.txt_PAEV_Site);
             this.panel_Add_Edit_View.Controls.Add(this.txt_PAEV_Title);
             this.panel_Add_Edit_View.Controls.Add(this.txt_PAEV_Description);
+            this.panel_Add_Edit_View.Controls.Add(this.btn_PAEV_Back);
             this.panel_Add_Edit_View.Controls.Add(this.btn_PAEV_Edit);
+            this.panel_Add_Edit_View.Controls.Add(this.btn_PAEV_Ok);
             this.panel_Add_Edit_View.Controls.Add(this.btn_PAEV_Add);
             this.panel_Add_Edit_View.Location = new System.Drawing.Point(316, 64);
             this.panel_Add_Edit_View.Name = "panel_Add_Edit_View";
-            this.panel_Add_Edit_View.Size = new System.Drawing.Size(240, 160);
+            this.panel_Add_Edit_View.Size = new System.Drawing.Size(240, 159);
             this.panel_Add_Edit_View.TabIndex = 4;
             // 
             // label11
@@ -631,6 +638,18 @@
             this.txt_PAEV_Description.Size = new System.Drawing.Size(425, 46);
             this.txt_PAEV_Description.TabIndex = 5;
             // 
+            // btn_PAEV_Back
+            // 
+            this.btn_PAEV_Back.BackColor = System.Drawing.Color.Transparent;
+            this.btn_PAEV_Back.Image = global::manpass.Properties.Resources.Back;
+            this.btn_PAEV_Back.Location = new System.Drawing.Point(219, 392);
+            this.btn_PAEV_Back.Name = "btn_PAEV_Back";
+            this.btn_PAEV_Back.Size = new System.Drawing.Size(62, 50);
+            this.btn_PAEV_Back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_PAEV_Back.TabIndex = 1;
+            this.btn_PAEV_Back.TabStop = false;
+            this.btn_PAEV_Back.Click += new System.EventHandler(this.Btn_PAEV_Back_Click);
+            // 
             // btn_PAEV_Edit
             // 
             this.btn_PAEV_Edit.BackColor = System.Drawing.Color.Transparent;
@@ -641,6 +660,19 @@
             this.btn_PAEV_Edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_PAEV_Edit.TabIndex = 1;
             this.btn_PAEV_Edit.TabStop = false;
+            this.btn_PAEV_Edit.Click += new System.EventHandler(this.Btn_PAEV_Edit_Click);
+            // 
+            // btn_PAEV_Ok
+            // 
+            this.btn_PAEV_Ok.BackColor = System.Drawing.Color.Transparent;
+            this.btn_PAEV_Ok.Image = global::manpass.Properties.Resources.ok;
+            this.btn_PAEV_Ok.Location = new System.Drawing.Point(38, 392);
+            this.btn_PAEV_Ok.Name = "btn_PAEV_Ok";
+            this.btn_PAEV_Ok.Size = new System.Drawing.Size(62, 50);
+            this.btn_PAEV_Ok.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_PAEV_Ok.TabIndex = 1;
+            this.btn_PAEV_Ok.TabStop = false;
+            this.btn_PAEV_Ok.Click += new System.EventHandler(this.Btn_PAEV_Ok_Click);
             // 
             // btn_PAEV_Add
             // 
@@ -1355,6 +1387,7 @@
             this.BackgroundImage = global::manpass.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(850, 576);
+            this.Controls.Add(this.panel_Add_Edit_View);
             this.Controls.Add(this.panel_Manager);
             this.Controls.Add(this.panel_About);
             this.Controls.Add(this.panel_Change_Password);
@@ -1362,7 +1395,6 @@
             this.Controls.Add(this.panel_SignUp);
             this.Controls.Add(this.panel_Help);
             this.Controls.Add(this.panel_Login);
-            this.Controls.Add(this.panel_Add_Edit_View);
             this.Controls.Add(this.pic_Icon);
             this.Controls.Add(this.panel_Left);
             this.Font = new System.Drawing.Font("Segoe Script", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1397,7 +1429,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_PAEV_Symbol)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_PAEV_Number)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_PAEV_Down)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PAEV_Back)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PAEV_Edit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PAEV_Ok)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_PAEV_Add)).EndInit();
             this.panel_SignUp.ResumeLayout(false);
             this.panel_SignUp.PerformLayout();
@@ -1543,6 +1577,8 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.PictureBox btn_PAEV_Back;
+        private System.Windows.Forms.PictureBox btn_PAEV_Ok;
     }
 }
 
