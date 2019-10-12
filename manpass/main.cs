@@ -16,6 +16,7 @@ namespace manpass
     {
         DataBase DB;
         string user;
+        string Id;
         public frm_Main()
         {
             InitializeComponent();
@@ -710,7 +711,7 @@ namespace manpass
             dict.Add("Who", user);
             while (!(DB.insert("tb_password", dict)))
             {
-                dict["Id"] = rnd.Next(1000000, 999999999).ToString();
+                dict["Id"] = rnd.Next(100000000, 999999999).ToString();
             }
             txt_PAEV_Title.Text = string.Empty;
             txt_PAEV_UserName.Text = string.Empty;
@@ -723,8 +724,29 @@ namespace manpass
 
         private void Btn_PManager_View_Click(object sender, EventArgs e)
         {
-            
-
+            string str;
+            try
+            {
+                str = listBox_PManage_Title.SelectedItem.ToString();
+                str = str.Remove(0, 5);
+                Id = str.Remove(9, str.Length - 9);
+                Dictionary<string, string> dict = new Dictionary<string, string>();
+                dict.Add("Id", Id);
+                List<string> lst = new List<string>();
+                var Result = DB.search("tb_password", dict, lst);
+                txt_PAEV_Description.Text = Result.Rows[0][5].ToString();
+                txt_PAEV_PassWord.Text = Result.Rows[0][3].ToString();
+                txt_PAEV_Site.Text = Result.Rows[0][4].ToString();
+                txt_PAEV_Title.Text = Result.Rows[0][1].ToString();
+                txt_PAEV_UserName.Text = Result.Rows[0][2].ToString();
+                btn_PAEV_Add.Visible = false;
+                panel_Add_Edit_View.Visible = true;
+                panel_Manager.Visible = false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("please select item from list", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Txt_PLog_PassWord_KeyDown(object sender, KeyEventArgs e)
