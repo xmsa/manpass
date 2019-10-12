@@ -56,7 +56,7 @@ namespace manpass
             panel_SignUp.Visible = false;
             panel_Change_Password.Visible = false;
             panel_About.Visible = false;
-
+            txt_PLog_UserName.Focus();
         }
 
         public static bool openfile(ref string path, string Filter)
@@ -634,12 +634,24 @@ namespace manpass
             panel_Change_Password.Visible = false;
             panel_About.Visible = false;
 
+            groupBox_PAEV_Random.Visible = true;
+
+            btn_PAEV_Ok.Visible = false;
             txt_PAEV_Description.Clear();
             txt_PAEV_PassWord.Clear();
             txt_PAEV_Site.Clear();
             txt_PAEV_Title.Clear();
             txt_PAEV_UserName.Clear();
             btn_PAEV_Edit.Visible = false;
+
+            txt_PAEV_Description.Enabled=true;
+            txt_PAEV_PassWord.Enabled = true;
+            txt_PAEV_Site.Enabled = true;
+            txt_PAEV_Title.Enabled = true;
+            txt_PAEV_UserName.Enabled = true;
+
+
+
         }
 
         private void Btn_PAEV_Random_Click(object sender, EventArgs e)
@@ -681,7 +693,7 @@ namespace manpass
 
         private void Btn_PAEV_Add_Click(object sender, EventArgs e)
         {
-
+            
             bool flag = false;
             string error = string.Empty;
             if (check_txt_Empty(txt_PAEV_Title))
@@ -725,9 +737,26 @@ namespace manpass
 
         private void Btn_PManager_View_Click(object sender, EventArgs e)
         {
-            string str;
+            if (showvalue()) { 
+                txt_PAEV_Description.Enabled=false;
+                txt_PAEV_PassWord.Enabled=false;
+                txt_PAEV_Site.Enabled=false;
+                txt_PAEV_Title.Enabled=false;
+                txt_PAEV_UserName.Enabled = false;
+                groupBox_PAEV_Random.Visible = false;
+                btn_PAEV_Random.Visible = false;
+                btn_PAEV_Add.Visible = false;
+                panel_Add_Edit_View.Visible = true;
+                panel_Manager.Visible = false;
+                btn_PAEV_Ok.Visible = false;
+            }
+        }
+
+        private bool showvalue()
+        {
             try
             {
+                string str;
                 str = listBox_PManage_Title.SelectedItem.ToString();
                 str = str.Remove(0, 5);
                 Id = str.Remove(9, str.Length - 9);
@@ -740,21 +769,12 @@ namespace manpass
                 txt_PAEV_Site.Text = Result.Rows[0][4].ToString();
                 txt_PAEV_Title.Text = Result.Rows[0][1].ToString();
                 txt_PAEV_UserName.Text = Result.Rows[0][2].ToString();
-
-                txt_PAEV_Description.Enabled=false;
-                txt_PAEV_PassWord.Enabled=false;
-                txt_PAEV_Site.Enabled=false;
-                txt_PAEV_Title.Enabled=false;
-                txt_PAEV_UserName.Enabled = false;
-                groupBox_PAEV_Random.Visible = false;
-                btn_PAEV_Random.Visible = false;
-                btn_PAEV_Add.Visible = false;
-                panel_Add_Edit_View.Visible = true;
-                panel_Manager.Visible = false;
+                return true;
             }
             catch (Exception)
             {
                 MessageBox.Show("please select item from list", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
         }
 
@@ -776,7 +796,17 @@ namespace manpass
 
         private void Btn_PManager_Edit_Click(object sender, EventArgs e)
         {
-
+            txt_PAEV_Description.Enabled = true;
+            txt_PAEV_PassWord.Enabled = true;
+            txt_PAEV_Site.Enabled = true;
+            txt_PAEV_Title.Enabled = true;
+            txt_PAEV_UserName.Enabled = true;
+            groupBox_PAEV_Random.Visible = true;
+            btn_PAEV_Random.Visible = true;
+            btn_PAEV_Add.Visible = false;
+            panel_Add_Edit_View.Visible = true;
+            panel_Manager.Visible = false;
+            btn_PAEV_Ok.Visible = true;
         }
 
         private void Btn_PAEV_Edit_Click(object sender, EventArgs e)
@@ -789,11 +819,39 @@ namespace manpass
             btn_PAEV_Random.Visible = true;
             btn_PAEV_Add.Visible = false;
             btn_PAEV_Edit.Visible = false;
+            btn_PAEV_Ok.Visible = true;
+            groupBox_PAEV_Random.Visible = true;
             
         }
 
         private void Btn_PAEV_Ok_Click(object sender, EventArgs e)
         {
+            bool flag = false;
+            string error = string.Empty;
+            if (check_txt_Empty(txt_PAEV_Title))
+            {
+                error += "Title\n";
+                flag = true;
+            }
+            if (check_txt_Empty(txt_PAEV_PassWord))
+            {
+                error += "PassWord\n";
+                flag = true;
+            }
+            if (flag)
+            {
+                MessageBox.Show(error + "fields are empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            Dictionary<string, string> dict = new Dictionary<string, string>();;
+            dict.Add("Title", txt_PAEV_Title.Text);
+            dict.Add("User", txt_PAEV_UserName.Text);
+            dict.Add("Password", txt_PAEV_PassWord.Text);
+            dict.Add("Site", txt_PAEV_Site.Text);
+            dict.Add("Description", txt_PAEV_Description.Text);
+            DB.update("tb_password", Id, dict);
+            panel_Add_Edit_View.Visible = false;
+            panel_Manager.Visible = true;
 
         }
 
