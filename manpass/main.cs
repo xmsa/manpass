@@ -135,6 +135,16 @@ namespace manpass
             panel_SignUp.Visible = false;
             panel_Change_Password.Visible = false;
             panel_About.Visible = false;
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            List<string> lst = new List<string>();
+            lst.Add("Title");
+            dict.Add("Who", user);
+            var Result = DB.search("tb_password", dict, lst);
+            listBox_PManage_Title.Items.Clear();
+            for (int i = 0; i < Result.Rows.Count; i++)
+            {
+                listBox_PManage_Title.Items.Add(Result.Rows[i][0].ToString());
+            }
 
         }
 
@@ -470,7 +480,7 @@ namespace manpass
             txt_PChPass_CPassword.Clear();
             txt_PChPass_NPassword.Clear();
             txt_PChPass_Password.Clear();
-            
+
 
         }
 
@@ -508,7 +518,7 @@ namespace manpass
         {
 
             Dictionary<string, string> dict = new Dictionary<string, string>();
-            
+
             bool flag = false;
             string error = string.Empty;
             if (check_txt_Empty(txt_PChPass_Password))
@@ -608,7 +618,31 @@ namespace manpass
 
         private void LinkLabel_PAbout_telegtam_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://t.me/Xmzhry"); 
+            System.Diagnostics.Process.Start("https://t.me/Xmzhry");
+        }
+
+        private void Btn_PManager_Add_Click(object sender, EventArgs e)
+        {
+            panel_Add_Edit_View.Visible = true;
+            panel_Help.Visible = false;
+            panel_Login.Visible = false;
+            panel_Manager.Visible = false;
+            panel_Setting.Visible = false;
+            panel_SignUp.Visible = false;
+            panel_Change_Password.Visible = false;
+            panel_About.Visible = false;
+
+            txt_PAEV_Description.Clear();
+            txt_PAEV_PassWord.Clear();
+            txt_PAEV_Site.Clear();
+            txt_PAEV_Title.Clear();
+            txt_PAEV_UserName.Clear();
+            btn_PAEV_Edit.Visible = false;
+        }
+
+        private void Btn_PAEV_Random_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

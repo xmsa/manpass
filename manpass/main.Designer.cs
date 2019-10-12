@@ -430,6 +430,7 @@
             this.btn_PManager_Add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_PManager_Add.TabIndex = 1;
             this.btn_PManager_Add.TabStop = false;
+            this.btn_PManager_Add.Click += new System.EventHandler(this.Btn_PManager_Add_Click);
             // 
             // panel_Add_Edit_View
             // 
@@ -472,6 +473,7 @@
             this.btn_PAEV_Random.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_PAEV_Random.TabIndex = 1;
             this.btn_PAEV_Random.TabStop = false;
+            this.btn_PAEV_Random.Click += new System.EventHandler(this.Btn_PAEV_Random_Click);
             // 
             // label10
             // 
@@ -594,7 +596,6 @@
             // 
             this.txt_PAEV_UserName.Location = new System.Drawing.Point(261, 58);
             this.txt_PAEV_UserName.Name = "txt_PAEV_UserName";
-            this.txt_PAEV_UserName.PasswordChar = '*';
             this.txt_PAEV_UserName.Size = new System.Drawing.Size(425, 46);
             this.txt_PAEV_UserName.TabIndex = 2;
             // 
@@ -1229,9 +1230,9 @@
             this.panel_About.Controls.Add(this.label30);
             this.panel_About.Controls.Add(this.label29);
             this.panel_About.Controls.Add(this.label28);
-            this.panel_About.Location = new System.Drawing.Point(96, 36);
+            this.panel_About.Location = new System.Drawing.Point(316, 406);
             this.panel_About.Name = "panel_About";
-            this.panel_About.Size = new System.Drawing.Size(721, 462);
+            this.panel_About.Size = new System.Drawing.Size(240, 157);
             this.panel_About.TabIndex = 10;
             // 
             // LinkLabel_PAbout_telegtam
