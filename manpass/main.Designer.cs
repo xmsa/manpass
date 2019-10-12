@@ -376,7 +376,7 @@
             this.panel_Manager.Controls.Add(this.btn_PManager_Add);
             this.panel_Manager.Location = new System.Drawing.Point(72, 64);
             this.panel_Manager.Name = "panel_Manager";
-            this.panel_Manager.Size = new System.Drawing.Size(240, 160);
+            this.panel_Manager.Size = new System.Drawing.Size(716, 442);
             this.panel_Manager.TabIndex = 3;
             // 
             // listBox_PManage_Title
@@ -386,7 +386,7 @@
             this.listBox_PManage_Title.ItemHeight = 38;
             this.listBox_PManage_Title.Location = new System.Drawing.Point(0, 0);
             this.listBox_PManage_Title.Name = "listBox_PManage_Title";
-            this.listBox_PManage_Title.Size = new System.Drawing.Size(240, 346);
+            this.listBox_PManage_Title.Size = new System.Drawing.Size(716, 346);
             this.listBox_PManage_Title.TabIndex = 0;
             // 
             // btn_PManager_View
@@ -1355,13 +1355,13 @@
             this.BackgroundImage = global::manpass.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(850, 576);
+            this.Controls.Add(this.panel_Manager);
             this.Controls.Add(this.panel_About);
             this.Controls.Add(this.panel_Change_Password);
             this.Controls.Add(this.panel_Setting);
             this.Controls.Add(this.panel_SignUp);
             this.Controls.Add(this.panel_Help);
             this.Controls.Add(this.panel_Login);
-            this.Controls.Add(this.panel_Manager);
             this.Controls.Add(this.panel_Add_Edit_View);
             this.Controls.Add(this.pic_Icon);
             this.Controls.Add(this.panel_Left);

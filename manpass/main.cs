@@ -138,12 +138,13 @@ namespace manpass
             Dictionary<string, string> dict = new Dictionary<string, string>();
             List<string> lst = new List<string>();
             lst.Add("Title");
+            lst.Add("Id");
             dict.Add("Who", user);
             var Result = DB.search("tb_password", dict, lst);
             listBox_PManage_Title.Items.Clear();
             for (int i = 0; i < Result.Rows.Count; i++)
             {
-                listBox_PManage_Title.Items.Add(Result.Rows[i][0].ToString());
+                listBox_PManage_Title.Items.Add("Id: ("+Result.Rows[i][1].ToString()+") Title: "+Result.Rows[i][0].ToString());
             }
 
         }
@@ -722,7 +723,7 @@ namespace manpass
 
         private void Btn_PManager_View_Click(object sender, EventArgs e)
         {
-
+            
 
         }
 
