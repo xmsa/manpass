@@ -647,7 +647,7 @@ namespace manpass
             rnd.AddRange(random("1234567890".ToUpper(), (int)numericUpDown_PAEV_Number.Value));
             rnd.AddRange(random("!@#$%".ToUpper(), (int)numericUpDown_PAEV_Symbol.Value));
 
-            txt_PAEV_PassWord.Text= random(rnd);
+            txt_PAEV_PassWord.Text = random(rnd);
         }
 
         private string random(List<char> lst)
@@ -679,7 +679,7 @@ namespace manpass
 
         private void Btn_PAEV_Add_Click(object sender, EventArgs e)
         {
-            
+
             bool flag = false;
             string error = string.Empty;
             if (check_txt_Empty(txt_PAEV_Title))
@@ -702,7 +702,7 @@ namespace manpass
             Dictionary<string, string> dict = new Dictionary<string, string>();
             dict.Add("Id", rnd.Next(1000000, 999999999).ToString());
             dict.Add("Title", txt_PAEV_Title.Text);
-            dict.Add("User",  txt_PAEV_UserName.Text);
+            dict.Add("User", txt_PAEV_UserName.Text);
             dict.Add("Password", txt_PAEV_PassWord.Text);
             dict.Add("Site", txt_PAEV_Site.Text);
             dict.Add("Description", txt_PAEV_Description.Text);
@@ -711,13 +711,35 @@ namespace manpass
             {
                 dict["Id"] = rnd.Next(1000000, 999999999).ToString();
             }
-            txt_PAEV_Title.Text=string.Empty;
+            txt_PAEV_Title.Text = string.Empty;
             txt_PAEV_UserName.Text = string.Empty;
             txt_PAEV_PassWord.Text = string.Empty;
             txt_PAEV_Site.Text = string.Empty;
             txt_PAEV_Description.Text = string.Empty;
             panel_Add_Edit_View.Visible = false;
             panel_Manager.Visible = true;
+        }
+
+        private void Btn_PManager_View_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void Txt_PLog_PassWord_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                Btn_PLog_Login_Click(sender, e);
+            }
+        }
+
+        private void Txt_PLog_UserName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                txt_PLog_PassWord.Focus();
+            }
         }
     }
 }

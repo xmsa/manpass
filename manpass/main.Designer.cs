@@ -312,6 +312,7 @@
             this.txt_PLog_PassWord.PasswordChar = '*';
             this.txt_PLog_PassWord.Size = new System.Drawing.Size(256, 46);
             this.txt_PLog_PassWord.TabIndex = 6;
+            this.txt_PLog_PassWord.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_PLog_PassWord_KeyDown);
             // 
             // txt_PLog_UserName
             // 
@@ -319,6 +320,7 @@
             this.txt_PLog_UserName.Name = "txt_PLog_UserName";
             this.txt_PLog_UserName.Size = new System.Drawing.Size(256, 46);
             this.txt_PLog_UserName.TabIndex = 5;
+            this.txt_PLog_UserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_PLog_UserName_KeyDown);
             // 
             // btn_PLog_Show
             // 
@@ -397,6 +399,7 @@
             this.btn_PManager_View.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_PManager_View.TabIndex = 1;
             this.btn_PManager_View.TabStop = false;
+            this.btn_PManager_View.Click += new System.EventHandler(this.Btn_PManager_View_Click);
             // 
             // btn_PManager_Edit
             // 
