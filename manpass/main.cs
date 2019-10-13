@@ -748,6 +748,7 @@ namespace manpass
                 btn_PAEV_Add.Visible = false;
                 panel_Add_Edit_View.Visible = true;
                 panel_Manager.Visible = false;
+                btn_PAEV_Edit.Visible = true;
                 btn_PAEV_Ok.Visible = false;
             }
         }
@@ -882,6 +883,21 @@ namespace manpass
             {
                 Btn_PLeft_Manager_Click(sender, e);
             }
+        }
+
+        private void Btn_PHelp_Help_Click(object sender, EventArgs e)
+        {
+            
+            if (File.Exists( Application.StartupPath + @"\Help.pdf"))
+            {
+                System.Diagnostics.Process.Start(Application.StartupPath + @"\Help.pdf");
+            }
+            else
+            {
+                MessageBox.Show("Couldn't find your Help.pdf", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+
+
         }
     }
 }

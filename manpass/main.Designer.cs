@@ -1125,6 +1125,7 @@
             this.btn_PHelp_Help.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_PHelp_Help.TabIndex = 1;
             this.btn_PHelp_Help.TabStop = false;
+            this.btn_PHelp_Help.Click += new System.EventHandler(this.Btn_PHelp_Help_Click);
             // 
             // panel_Change_Password
             // 
