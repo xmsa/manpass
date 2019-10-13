@@ -13,8 +13,10 @@ namespace manpass
     class DataBase
     {
         SQLiteConnection m_dbConnection;
+        string password;
         public DataBase()
         {
+            password = "%#zze#5il4$duhM$$%OEID234301L#AS";
             bool flag = true;
             if (!File.Exists(Application.StartupPath.ToString() + @"\DataBase.sqlite"))
             {
@@ -30,6 +32,7 @@ namespace manpass
                         Dictionary<string, string> tb_user = new Dictionary<string, string>();
                         Dictionary<string, string> tb_profile = new Dictionary<string, string>();
                         Dictionary<string, string> tb_password = new Dictionary<string, string>();
+                        Dictionary<string, string> tb_setting = new Dictionary<string, string>();
 
                         tb_user.Add("User", "TEXT NOT NULL PRIMARY KEY");
                         tb_user.Add("Password", "TEXT NOT NULL");
@@ -49,9 +52,15 @@ namespace manpass
                         tb_password.Add("Description", "TEXT");
                         tb_password.Add("Who", "TEXT NOT NULL");
 
+                        tb_password.Add("Who", "TEXT NOT NULL");
+                        tb_password.Add("background", "TEXT");
+
                         create_tb(m_dbConnection, "tb_user", tb_user);
                         create_tb(m_dbConnection, "tb_profile", tb_profile);
                         create_tb(m_dbConnection, "tb_password", tb_password);
+                        create_tb(m_dbConnection, "tb_setting", tb_setting);
+
+                        m_dbConnection.SetPassword(password);
                         break;
                     }
                     else if (message == DialogResult.No)
@@ -86,10 +95,10 @@ namespace manpass
             SQLiteConnection.CreateFile(name + ".sqlite");
         }
 
-        public static SQLiteConnection ConnectionDB(string name)
+        public SQLiteConnection ConnectionDB(string name)
         {
             SQLiteConnection m_dbConnection;
-            m_dbConnection = new SQLiteConnection("Data Source=" + name + ".sqlite;Version=3;");
+            m_dbConnection = new SQLiteConnection("Data Source=" + name + ".sqlite;Version=3;"+"password ="+password+";");
             return m_dbConnection;
         }
 
