@@ -21,6 +21,7 @@ namespace manpass
         {
             InitializeComponent();
             DB = new DataBase();
+            
             //set location 
             panel_Add_Edit_View.Location = new Point(71, 64);
             panel_Help.Location = new Point(71, 64);
@@ -57,8 +58,40 @@ namespace manpass
             panel_Change_Password.Visible = false;
             panel_About.Visible = false;
             txt_PLog_UserName.Focus();
-        }
 
+        }
+        
+
+        void changebackground()
+        {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            List<string> lst = new List<string>();
+            dict.Add("Who", user);
+            var Result = DB.search("tb_setting", dict, lst).Rows[0][1];
+
+            switch (Result)
+            {
+                case "1":
+                    this.BackgroundImage = Properties.Resources.background;
+                    break;
+                case "2":
+                    this.BackgroundImage = Properties.Resources.background2;
+
+                    break;
+                case "3":
+                    this.BackgroundImage = Properties.Resources.background3;
+
+                    break;
+                case "4":
+                    this.BackgroundImage = Properties.Resources.background4;
+
+                    break;
+                case "5":
+                    this.BackgroundImage = Properties.Resources.background5;
+
+                    break;
+            }
+        }
         public static bool openfile(ref string path, string Filter)
         {
 
@@ -180,13 +213,13 @@ namespace manpass
 
         private void Btn_PSign_clear_Click(object sender, EventArgs e)
         {
-            txt_PSign_CPassWord.Text = string.Empty;
-            txt_PSign_Email.Text = string.Empty;
-            txt_PSign_FirstName.Text = string.Empty;
-            txt_PSign_LastName.Text = string.Empty;
-            txt_PSign_PassWord.Text = string.Empty;
-            txt_PSign_Phone_Number.Text = string.Empty;
-            txt_PSign_Username.Text = string.Empty;
+            txt_PSign_CPassWord.Clear();
+            txt_PSign_Email.Clear();
+            txt_PSign_FirstName.Clear();
+            txt_PSign_LastName.Clear();
+            txt_PSign_PassWord.Clear();
+            txt_PSign_Phone_Number.Clear();
+            txt_PSign_Username.Clear();
 
         }
 
@@ -234,29 +267,29 @@ namespace manpass
                 MessageBox.Show(error + "fields are empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (txt_PSign_PassWord.Text.Length < 8)
+            if (txt_PSign_PassWord.Text.Trim().Length < 8)
             {
                 MessageBox.Show("Use 8 characters or more for your password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (txt_PSign_CPassWord.Text == txt_PSign_PassWord.Text)
+            if (txt_PSign_CPassWord.Text.Trim() == txt_PSign_PassWord.Text.Trim())
             {
                 Dictionary<string, string> dict_user = new Dictionary<string, string>();
-                dict_user.Add("User", txt_PSign_Username.Text);
-                dict_user.Add("Password", txt_PSign_PassWord.Text);
+                dict_user.Add("User", txt_PSign_Username.Text.Trim().ToUpper());
+                dict_user.Add("Password", txt_PSign_PassWord.Text.Trim());
 
                 if (DB.insert("tb_user", dict_user))
                 {
                     Dictionary<string, string> dict_profile = new Dictionary<string, string>();
-                    dict_profile.Add("User", txt_PSign_Username.Text);
-                    dict_profile.Add("FirstName", txt_PSign_FirstName.Text);
-                    dict_profile.Add("LastName", txt_PSign_LastName.Text);
-                    dict_profile.Add("Email", txt_PSign_Email.Text);
-                    dict_profile.Add("phoneNumber", txt_PSign_Phone_Number.Text);
+                    dict_profile.Add("User", txt_PSign_Username.Text.Trim().ToUpper());
+                    dict_profile.Add("FirstName", txt_PSign_FirstName.Text.Trim());
+                    dict_profile.Add("LastName", txt_PSign_LastName.Text.Trim());
+                    dict_profile.Add("Email", txt_PSign_Email.Text.Trim());
+                    dict_profile.Add("phoneNumber", txt_PSign_Phone_Number.Text.Trim());
                     if (DB.insert("tb_profile", dict_profile))
                     {
-                        MessageBox.Show("Welcome " + txt_PSign_FirstName.Text);
-                        user = txt_PSign_Username.Text;
+                        MessageBox.Show("Welcome " + txt_PSign_Username.Text.Trim().ToUpper());
+                        user = txt_PSign_Username.Text.Trim().ToUpper();
                         btn_PLeft_Login.Visible = false;
                         btn_PLeft_Manager.Visible = true;
                         btn_PLeft_Setting.Visible = true;
@@ -264,7 +297,10 @@ namespace manpass
                         panel_SignUp.Visible = false;
                         panel_Change_Password.Visible = false;
                         panel_About.Visible = false;
-
+                        Dictionary<string, string> dict_background = new Dictionary<string, string>();
+                        dict_background.Add("background", "1");
+                        dict_background.Add("Who", user);
+                        DB.insert("tb_setting", dict_background);
                         return;
                     }
                 }
@@ -281,7 +317,7 @@ namespace manpass
 
         private bool check_txt_Empty(TextBox txtbox)
         {
-            return txtbox.Text == string.Empty;
+            return txtbox.Text.Trim() == string.Empty;
         }
 
         private void Btn_PLog_Show_Click(object sender, EventArgs e)
@@ -311,14 +347,14 @@ namespace manpass
             }
             List<string> lst = new List<string>();
             Dictionary<string, string> dict = new Dictionary<string, string>();
-            dict.Add("User", txt_PLog_UserName.Text);
+            dict.Add("User", txt_PLog_UserName.Text.Trim().ToUpper());
             var rows = DB.search("tb_user", dict, lst).Rows;
             if (rows.Count == 1)
             {
-                if (rows[0][1].ToString() == txt_PLog_PassWord.Text)
+                if (rows[0][1].ToString() == txt_PLog_PassWord.Text.Trim())
                 {
-                    MessageBox.Show("Welcome " + txt_PLog_UserName.Text);
-                    user = txt_PLog_UserName.Text;
+                    MessageBox.Show("Welcome " + txt_PLog_UserName.Text.Trim().ToUpper());
+                    user = txt_PLog_UserName.Text.Trim().ToUpper();
                     btn_PLeft_Login.Visible = false;
                     btn_PLeft_Manager.Visible = true;
                     btn_PLeft_Setting.Visible = true;
@@ -327,7 +363,7 @@ namespace manpass
                     panel_Change_Password.Visible = false;
 
                     panel_About.Visible = false;
-
+                    changebackground();
                     return;
                 }
                 else
@@ -373,29 +409,46 @@ namespace manpass
             rBtn_PSetting_Background5.Checked = true;
         }
 
+         void update_background(int value)
+        {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            dict.Add("background", value.ToString());
+            DB.update("tb_setting", user,dict);
+        }
+
+
         private void RBtn_PSetting_Background_CheckedChanged(object sender, EventArgs e)
         {
             this.BackgroundImage = Properties.Resources.background;
+            update_background(1);
         }
 
         private void RBtn_PSetting_Background2_CheckedChanged(object sender, EventArgs e)
         {
             this.BackgroundImage = Properties.Resources.background2;
+            update_background(2);
+
         }
 
         private void RBtn_PSetting_Background3_CheckedChanged(object sender, EventArgs e)
         {
             this.BackgroundImage = Properties.Resources.background3;
+            update_background(3);
+
         }
 
         private void RBtn_PSetting_Background4_CheckedChanged(object sender, EventArgs e)
         {
             this.BackgroundImage = Properties.Resources.background4;
+            update_background(4);
+
         }
 
         private void RBtn_PSetting_Background5_CheckedChanged(object sender, EventArgs e)
         {
             this.BackgroundImage = Properties.Resources.background5;
+            update_background(5);
+
         }
 
         private void Btn_PSetting_ExportDB_Click(object sender, EventArgs e)
@@ -446,15 +499,15 @@ namespace manpass
                 panel_About.Visible = false;
 
 
-                txt_PLog_UserName.Text = string.Empty;
-                txt_PLog_PassWord.Text = string.Empty;
-                txt_PSign_CPassWord.Text = string.Empty;
-                txt_PSign_Email.Text = string.Empty;
-                txt_PSign_FirstName.Text = string.Empty;
-                txt_PSign_LastName.Text = string.Empty;
-                txt_PSign_PassWord.Text = string.Empty;
-                txt_PSign_Phone_Number.Text = string.Empty;
-                txt_PSign_Username.Text = string.Empty;
+                txt_PLog_UserName.Clear();
+                txt_PLog_PassWord.Clear();
+                txt_PSign_CPassWord.Clear();
+                txt_PSign_Email.Clear();
+                txt_PSign_FirstName.Clear();
+                txt_PSign_LastName.Clear();
+                txt_PSign_PassWord.Clear();
+                txt_PSign_Phone_Number.Clear();
+                txt_PSign_Username.Clear();
 
 
 
@@ -543,12 +596,12 @@ namespace manpass
                 MessageBox.Show(error + "fields are empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (txt_PChPass_NPassword.Text.Length < 8)
+            if (txt_PChPass_NPassword.Text.Trim().Length < 8)
             {
                 MessageBox.Show("Use 8 characters or more for your password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (txt_PChPass_CPassword.Text != txt_PChPass_NPassword.Text)
+            if (txt_PChPass_CPassword.Text.Trim() != txt_PChPass_NPassword.Text.Trim())
             {
                 MessageBox.Show("Those passwords didn't match. Try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -557,10 +610,10 @@ namespace manpass
             dict.Add("User", user);
             var rows = DB.search("tb_user", dict, lst).Rows;
 
-            if (rows[0][1].ToString() == txt_PChPass_Password.Text)
+            if (rows[0][1].ToString() == txt_PChPass_Password.Text.Trim())
             {
                 dict.Clear();
-                dict.Add("Password", txt_PChPass_NPassword.Text);
+                dict.Add("Password", txt_PChPass_NPassword.Text.Trim());
                 DB.update("tb_user", user, dict);
                 panel_Change_Password.Visible = false;
                 panel_Setting.Visible = true;
@@ -658,8 +711,8 @@ namespace manpass
         {
             var rnd = random("qwertyuiopasdfghjklzxcvbnm", (int)numericUpDown_PAEV_Down.Value);
             rnd.AddRange(random("qwertyuiopasdfghjklzxcvbnm".ToUpper(), (int)numericUpDown_PAEV_Up.Value));
-            rnd.AddRange(random("1234567890".ToUpper(), (int)numericUpDown_PAEV_Number.Value));
-            rnd.AddRange(random("!@#$%".ToUpper(), (int)numericUpDown_PAEV_Symbol.Value));
+            rnd.AddRange(random("1234567890", (int)numericUpDown_PAEV_Number.Value));
+            rnd.AddRange(random("!@#$%", (int)numericUpDown_PAEV_Symbol.Value));
 
             txt_PAEV_PassWord.Text = random(rnd);
         }
@@ -714,22 +767,22 @@ namespace manpass
 
             Random rnd = new Random();
             Dictionary<string, string> dict = new Dictionary<string, string>();
-            dict.Add("Id", rnd.Next(1000000, 999999999).ToString());
-            dict.Add("Title", txt_PAEV_Title.Text);
-            dict.Add("User", txt_PAEV_UserName.Text);
-            dict.Add("Password", txt_PAEV_PassWord.Text);
-            dict.Add("Site", txt_PAEV_Site.Text);
-            dict.Add("Description", txt_PAEV_Description.Text);
+            dict.Add("Id", rnd.Next(100000000, 999999999).ToString());
+            dict.Add("Title", txt_PAEV_Title.Text.Trim());
+            dict.Add("User", txt_PAEV_UserName.Text.Trim());
+            dict.Add("Password", txt_PAEV_PassWord.Text.Trim());
+            dict.Add("Site", txt_PAEV_Site.Text.Trim());
+            dict.Add("Description", txt_PAEV_Description.Text.Trim());
             dict.Add("Who", user);
             while (!(DB.insert("tb_password", dict)))
             {
                 dict["Id"] = rnd.Next(100000000, 999999999).ToString();
             }
-            txt_PAEV_Title.Text = string.Empty;
-            txt_PAEV_UserName.Text = string.Empty;
-            txt_PAEV_PassWord.Text = string.Empty;
-            txt_PAEV_Site.Text = string.Empty;
-            txt_PAEV_Description.Text = string.Empty;
+            txt_PAEV_Title.Clear();
+            txt_PAEV_UserName.Clear();
+            txt_PAEV_PassWord.Clear();
+            txt_PAEV_Site.Clear();
+            txt_PAEV_Description.Clear();
             panel_Add_Edit_View.Visible = false;
             panel_Manager.Visible = true;
             Btn_PLeft_Manager_Click(sender, e);
@@ -848,11 +901,11 @@ namespace manpass
                 return;
             }
             Dictionary<string, string> dict = new Dictionary<string, string>();;
-            dict.Add("Title", txt_PAEV_Title.Text);
-            dict.Add("User", txt_PAEV_UserName.Text);
-            dict.Add("Password", txt_PAEV_PassWord.Text);
-            dict.Add("Site", txt_PAEV_Site.Text);
-            dict.Add("Description", txt_PAEV_Description.Text);
+            dict.Add("Title", txt_PAEV_Title.Text.Trim());
+            dict.Add("User", txt_PAEV_UserName.Text.Trim());
+            dict.Add("Password", txt_PAEV_PassWord.Text.Trim());
+            dict.Add("Site", txt_PAEV_Site.Text.Trim());
+            dict.Add("Description", txt_PAEV_Description.Text.Trim());
             DB.update("tb_password", Id, dict);
             panel_Add_Edit_View.Visible = false;
             panel_Manager.Visible = true;

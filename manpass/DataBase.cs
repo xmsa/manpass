@@ -52,14 +52,14 @@ namespace manpass
                         tb_password.Add("Description", "TEXT");
                         tb_password.Add("Who", "TEXT NOT NULL");
 
-                        tb_password.Add("Who", "TEXT NOT NULL");
-                        tb_password.Add("background", "TEXT");
+                        tb_setting.Add("Who", "TEXT NOT NULL");
+                        tb_setting.Add("background", "TEXT");
 
                         create_tb(m_dbConnection, "tb_user", tb_user);
                         create_tb(m_dbConnection, "tb_profile", tb_profile);
                         create_tb(m_dbConnection, "tb_password", tb_password);
                         create_tb(m_dbConnection, "tb_setting", tb_setting);
-
+                        
                         m_dbConnection.SetPassword(password);
                         break;
                     }
@@ -98,7 +98,8 @@ namespace manpass
         public SQLiteConnection ConnectionDB(string name)
         {
             SQLiteConnection m_dbConnection;
-            m_dbConnection = new SQLiteConnection("Data Source=" + name + ".sqlite;Version=3;"+"password ="+password+";");
+            
+            m_dbConnection = new SQLiteConnection("Data Source=" + name + ".sqlite;Version=3;" + "password =" + password + ";");
             return m_dbConnection;
         }
 
@@ -131,16 +132,25 @@ namespace manpass
         public bool insert(string tbl, Dictionary<string, string> dict)
         {
             string Primary_Key = "User";
+            bool flag = true;
 
             if (tbl == "tb_password")
             {
                 Primary_Key = "Id";
             }
-            List<string> lst = new List<string>();
-            Dictionary<string, string> dict2 = new Dictionary<string, string>();
-            dict2.Add(Primary_Key, dict[Primary_Key]);
+            else if (tbl=="tb_setting")
+            {
+                flag = false;
+            }
+            int rows = 0;
+            if (flag)
+            {
+                List<string> lst = new List<string>();
+                Dictionary<string, string> dict2 = new Dictionary<string, string>();
+                dict2.Add(Primary_Key, dict[Primary_Key]);
 
-            int rows = search(tbl, dict2, lst).Rows.Count;
+                rows = search(tbl, dict2, lst).Rows.Count;
+            }
             if (rows == 0)
             {
                 m_dbConnection.Open();
@@ -233,6 +243,8 @@ namespace manpass
 
             if ("tb_password" == tbl)
                 str2 = "Id";
+            else if ("tb_setting" == tbl)
+                 str2 = "Who";
 
             string sql = "UPDATE " + tbl + " SET " + str + " WHERE " + str2 + " = '" + value + "'";
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
