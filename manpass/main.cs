@@ -861,8 +861,10 @@ namespace manpass
                 btn_PAEV_Random.Visible = true;
                 btn_PAEV_Add.Visible = false;
                 panel_Add_Edit_View.Visible = true;
+
                 panel_Manager.Visible = false;
                 btn_PAEV_Ok.Visible = true;
+                btn_PAEV_Random.Visible = true;
             }
         }
 
